@@ -22,8 +22,10 @@ wire [31:0] prng_lfsr_next = (ldLFSR) ? ldVal[31:0] :
 
 always @(posedge clk or posedge rst)
 begin
-	if(rst)
+	if(rst) begin
 		prng_lfsr <= 32'h00000000;
+		lfsrVal <= 32'h00000000;
+	end
 	else
 		prng_lfsr <= prng_lfsr_next;
 end
