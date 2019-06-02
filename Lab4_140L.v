@@ -317,7 +317,7 @@ assign L4_PrintBuf = de_cr;
 
 always @(bu_rx_data_rdy or rst) begin
 	if(rst) begin
-		state <= s0;
+		state <= idle;
 	end
 	else begin
 		case(state)
