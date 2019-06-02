@@ -302,11 +302,14 @@ assign sccEldByte = ((state == encrypt) & scdCharIsValid & bu_rx_data_rdy);
 assign sccEmsBitsLd = sccEldByte;
 assign sccElsBitsLd = sccEldByte;
 
+reg EmsBitsSl;
+assign sccEmsBitsSl = EmsBitsSl; 
+
 always @(posedge clk) begin
 	if(rst)
-		sccEmsBitsSl = 1'b1;
+		EmsBitsSl = 1'b1;
 	else
-		sccEmsBitsSl = ~sccEmsBitsSl;
+		EmsBitsSl = ~EmsBitsSl;
 end
 
 assign L4_PrintBuf = de_cr; 
