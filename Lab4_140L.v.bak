@@ -55,7 +55,7 @@ module Lab4_140L (
    wire 	   de_cr;
 
    decodeKeysL4 dk (
-		    .de_esc(),
+		    .de_esc(rst),
 		    .de_validAscii(de_validAscii),
 		    .de_bigD(de_bigD),
 		    .de_bigE(de_bigE),
@@ -79,6 +79,8 @@ module Lab4_140L (
 			.sccLdKey(sccLdKey),
 			.sccLdLFSR(sccLdLFSR),
 			
+			.L4_tx_data(L4_tx_data),
+			.L4_tx_data_rdy(L4_tx_data_rdy),
 			.bu_rx_data(bu_rx_data),
 			.bu_rx_data_rdy(bu_rx_data_rdy),
 			.scdCharIsValid(scdCharIsValid),
@@ -91,8 +93,6 @@ module Lab4_140L (
 			.de_bigS(de_bigS),
 			.de_hex(de_hex),
 			.de_cr(de_cr),
-
-			.L4_PrintBuf(L4_PrintBuf),
 		
 			.rst(rst),
 			.clk(clk));
@@ -257,8 +257,8 @@ module scctrl (
 		 output [7:0] sccLdKey,
 		 output sccLdLFSR,
 		
-		 //output [7:0] L4_tx_data,
-		 //output L4_tx_data_rdy,
+		 output [7:0] L4_tx_data,
+		 output L4_tx_data_rdy,
 		 input [7:0] bu_rx_data,
 		 input bu_rx_data_rdy,
 		 input scdCharIsValid,
@@ -271,8 +271,6 @@ module scctrl (
 		 input de_bigS,
 		 input de_hex,
 		 input de_cr,
-
-		 output L4_PrintBuf,
 	
 		 input rst,
 		 input clk    
@@ -280,13 +278,14 @@ module scctrl (
 
 
 reg [3:0] state;
+reg [7:0] outp;
 //s0 start
 //s1 read encrypt input
 //s2 encrypt and output
 parameter s0 = 0, s1 = 1, s2 = 2, s3 = 3, s4 = 4, s5 = 5, 
 		  s6 = 6, s7 = 7, s8 = 8, s9 = 9, s10 = 10, s11 = 11;
 
-/* always @(posedge clk or rst) begin
+always @(posedge clk or rst) begin
 	if(rst) begin
 		state <= s0;
 		outp <= 8'b00000000;
@@ -295,45 +294,27 @@ parameter s0 = 0, s1 = 1, s2 = 2, s3 = 3, s4 = 4, s5 = 5,
 		state <= state;
 		outp <= outp;
 	end
-end */
+end
 
-assign sccEncrypt = (state == s1);
-assign sccEldByte = ((state == s1) & scdCharIsValid & bu_rx_data_rdy);
-assign sccEmsBitsLd = sccEldByte;
-assign sccElsBitsLd = sccEldByte;
-assign sccEmsBitsSl = sccEmsBitsLd;
-
-assign L4_PrintBuf = de_cr; 
+assign sccEncrypt = (state == s2);
+assign sccEldByte = ((state == s2) & scdCharIsValid & bu_rx_data_rdy);
 
 
-always @(bu_rx_data_rdy or rst) begin
-	if(rst) begin
-		state <= s0;
+always @(L4_tx_data_rdy) begin
+  case(state)
+	s0:begin
+		if(de_bigE)
+			state <= s1;
+		else
+			state <= s0;
 	end
-	else begin
-		case(state)
-			s0:begin
-				if(de_bigE)
-					state <= s1;
-				else if(de_bigD)
-					state <= s2;
-				else
-					state <= s0;
-			end
-			s1:begin
-				if(de_cr)
-					state <= s0;
-				else
-					state <= s1;
-			end
-			s2:begin
-				if(de_cr)
-					state <= s0;
-				else
-					state <= s2;
-			end
-		endcase
+	s1:begin
+		if(de_cr)
+			state <= s0;
+		else
+			state <= s1;
 	end
+  endcase
 end
 
 

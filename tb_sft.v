@@ -241,8 +241,7 @@ module tb_sft(
       sendByte("b"); sendByte("0");
       sendByte(8'h0d);
       waitN(100);
-      //
-      //      $display("]}");
+      $display("end of test");
       $finish;
 
    end

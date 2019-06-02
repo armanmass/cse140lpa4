@@ -1,0 +1,16 @@
+
+State Machine - |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm|cstate
+Name cstate.EMITLF cstate.WTEMITCR cstate.EMITCR cstate.IDLE 
+cstate.IDLE 0 0 0 0 
+cstate.EMITCR 0 0 1 1 
+cstate.WTEMITCR 0 1 0 1 
+cstate.EMITLF 1 0 0 1 
+
+State Machine - |latticehx1k|uartTxBuf:ufifo|tx_fsm:tx_fsm|cstate
+Name cstate.EMITCRLF1 cstate.WAITTX cstate.STROBETX cstate.STARTTX cstate.EMITCRLF0 cstate.IDLE 
+cstate.IDLE 0 0 0 0 0 0 
+cstate.EMITCRLF0 0 0 0 0 1 1 
+cstate.STARTTX 0 0 0 1 0 1 
+cstate.STROBETX 0 0 1 0 0 1 
+cstate.WAITTX 0 1 0 0 0 1 
+cstate.EMITCRLF1 1 0 0 0 0 1 

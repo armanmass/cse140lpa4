@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at uarttxbuf.v(175): object "emitcr" differs only in case from object "EMITCR" in the same scope File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 175
+Info (10281): Verilog HDL Declaration information at uarttxbuf.v(176): object "emitlf" differs only in case from object "EMITLF" in the same scope File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 176
