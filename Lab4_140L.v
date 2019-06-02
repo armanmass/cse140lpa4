@@ -79,6 +79,7 @@ module Lab4_140L (
 			.sccLdKey(sccLdKey),
 			.sccLdLFSR(sccLdLFSR),
 			
+			.L4_tx_data_rdy(L4_tx_data_rdy),
 			.bu_rx_data(bu_rx_data),
 			.bu_rx_data_rdy(bu_rx_data_rdy),
 			.scdCharIsValid(scdCharIsValid),
@@ -259,7 +260,7 @@ module scctrl (
 		 output sccLdLFSR,
 		
 		 //output [7:0] L4_tx_data,
-		 //output L4_tx_data_rdy,
+		 output L4_tx_data_rdy,
 		 input [7:0] bu_rx_data,
 		 input bu_rx_data_rdy,
 		 input scdCharIsValid,
@@ -298,9 +299,9 @@ assign sccEmsBitsSl = EmsBitsSl;
 
 always @(posedge clk) begin
 	if(rst)
-		EmsBitsSl = 1'b1;
+		EmsBitsSl <= 1'b1;
 	else
-		EmsBitsSl = ~EmsBitsSl;
+		EmsBitsSl <= ~EmsBitsSl;
 end
 
 
@@ -309,6 +310,8 @@ assign L4_led[1] = (state == (encrypt || decrypt));
 assign L4_led[2] = (state == load);
 assign L4_led[3] = 1'b0;
 assign L4_led[4] = (state == idle);
+
+assign 
 
 assign L4_PrintBuf = de_cr; 
 
@@ -397,5 +400,5 @@ regrce r1 (.q(delay1), .d(sccEldByte), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r2 (.q(delay2), .d(delay1), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r3 (.q(delay3), .d(delay2), .ce(1'b1), .rst(rst), .clk(clk));
 //regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
-
+assign L4_tx_data_rdy = delay2 || delay3;
 endmodule // scctrl
