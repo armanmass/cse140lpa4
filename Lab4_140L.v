@@ -283,7 +283,7 @@ reg [3:0] state;
 //s0 start
 //s1 read encrypt input
 //s2 encrypt and output
-parameter s0 = 0, s1 = 1, s2 = 2, s3 = 3, s4 = 4, s5 = 5, 
+parameter idle = 0, encrypt = 1, decrypt = 2, s3 = 3, s4 = 4, s5 = 5, 
 		  s6 = 6, s7 = 7, s8 = 8, s9 = 9, s10 = 10, s11 = 11;
 
 /* always @(posedge clk or rst) begin
@@ -297,11 +297,17 @@ parameter s0 = 0, s1 = 1, s2 = 2, s3 = 3, s4 = 4, s5 = 5,
 	end
 end */
 
-assign sccEncrypt = (state == s1);
-assign sccEldByte = ((state == s1) & scdCharIsValid & bu_rx_data_rdy);
+assign sccEncrypt = (state == encrypt);
+assign sccEldByte = ((state == encrypt) & scdCharIsValid & bu_rx_data_rdy);
 assign sccEmsBitsLd = sccEldByte;
 assign sccElsBitsLd = sccEldByte;
-assign sccEmsBitsSl = sccEmsBitsLd;
+
+always @(posedge clk) begin
+	if(rst)
+		sccEmsBitsSl = 1'b1;
+	else
+		sccEmsBitsSl = ~sccEmsBitsSl;
+end
 
 assign L4_PrintBuf = de_cr; 
 
@@ -312,7 +318,7 @@ always @(bu_rx_data_rdy or rst) begin
 	end
 	else begin
 		case(state)
-			s0:begin
+			idle:begin
 				if(de_bigE)
 					state <= s1;
 				else if(de_bigD)
@@ -320,13 +326,13 @@ always @(bu_rx_data_rdy or rst) begin
 				else
 					state <= s0;
 			end
-			s1:begin
+			encrypt:begin
 				if(de_cr)
 					state <= s0;
 				else
 					state <= s1;
 			end
-			s2:begin
+			decrypt:begin
 				if(de_cr)
 					state <= s0;
 				else
