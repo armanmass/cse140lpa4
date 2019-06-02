@@ -7,12 +7,11 @@ module lfsr (
 	     input 	   rst,
 	     input 	   clk);
 
-reg [31:0] prng_lfsr, temp;
+reg [31:0] prng_lfsr;
 
 wire new_bit = prng_lfsr[2] ^ prng_lfsr[5] ^ prng_lfsr[6] ^ prng_lfsr[12] ^ prng_lfsr[30];
 
 assign lfsrVal[31:0] = prng_lfsr[31:0];
-assign ldVal = temp;
 
 assign psrByte[7:0] = 8'b00000000;
 //prng_lfsr[7:0] ^ prng_lfsr[15:8] ^
@@ -23,7 +22,6 @@ wire [31:0] prng_lfsr_next = (ldLFSR) ? ldVal[31:0] :
 
 always @(posedge clk or posedge rst)
 begin
-	temp <= 32'h00000000;
 	if(rst) 
 		prng_lfsr <= 32'h00000000;
 	else
