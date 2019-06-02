@@ -285,8 +285,8 @@ reg [3:0] state;
 //idle start
 //encrypt read encrypt input
 //decrypt encrypt and output
-parameter idle = 0, encrypt = 1, decrypt = 2, s3 = 3, s4 = 4, s5 = 5, 
-		  s6 = 6, s7 = 7, s8 = 8, s9 = 9, s10 = 10, s11 = 11;
+parameter idle = 0, encrypt = 1, decrypt = 2, load = 3, load1 = 4, load2 = 5, 
+		  load3 = 6, load4 = 7, load5 = 8, load6 = 9, load7 = 10, s11 = 11;
 
 /* always @(posedge clk or rst) begin
 	if(rst) begin
@@ -315,6 +315,11 @@ always @(posedge clk) begin
 end
 
 
+assign L4_led[0] = (state == (encrypt || decrypt || load));
+assign L4_led[1] = (state == (encrypt || decrypt));
+assign L4_led[2] = (state == load);
+assign L4_led[3] = 1'b0;
+assign L4_led[4] = (state == idle);
 
 assign L4_PrintBuf = de_cr; 
 
@@ -330,6 +335,8 @@ always @(bu_rx_data_rdy or rst) begin
 					state <= encrypt;
 				else if(de_bigD)
 					state <= decrypt;
+				else if(de_bigL)
+					state <= load;
 				else
 					state <= idle;
 			end
@@ -344,6 +351,54 @@ always @(bu_rx_data_rdy or rst) begin
 					state <= idle;
 				else
 					state <= decrypt;
+			end
+			load:begin
+				if(de_hex)
+					state <= load2;
+				else
+					state <= load;
+			end
+			load2:begin
+				if(de_hex)
+					state <= load3;
+				else
+					state <= load2;
+			end
+			load3:begin
+				if(de_hex)
+					state <= load4;
+				else
+					state <= load3;
+			end
+			load4:begin
+				if(de_hex)
+					state <= load5;
+				else
+					state <= load4;
+			end
+			load5:begin
+				if(de_hex)
+					state <= load6;
+				else
+					state <= load5;
+			end
+			load6:begin
+				if(de_hex)
+					state <= load7;
+				else
+					state <= load6;
+			end
+			load7:begin
+				if(de_hex)
+					state <= load8;
+				else
+					state <= load7;
+			end
+			load8:begin
+				if(de_cr)
+					state <= idle;
+				else
+					state <= load8;
 			end
 		endcase
 	end
