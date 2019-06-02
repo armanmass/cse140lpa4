@@ -286,18 +286,7 @@ reg [3:0] state;
 //encrypt read encrypt input
 //decrypt encrypt and output
 parameter idle = 0, encrypt = 1, decrypt = 2, load = 3, load1 = 4, load2 = 5, 
-		  load3 = 6, load4 = 7, load5 = 8, load6 = 9, load7 = 10, s11 = 11;
-
-/* always @(posedge clk or rst) begin
-	if(rst) begin
-		state <= s0;
-		outp <= 8'b00000000;
-	end
-	else begin
-		state <= state;
-		outp <= outp;
-	end
-end */
+		  load3 = 6, load4 = 7, load5 = 8, load6 = 9, load7 = 10, load8 = 11;
 
 assign sccEncrypt = (state == encrypt);
 assign sccEldByte = (sccEncrypt & scdCharIsValid & bu_rx_data_rdy);

@@ -12,6 +12,7 @@ reg [31:0] prng_lfsr;
 wire new_bit = prng_lfsr[2] ^ prng_lfsr[5] ^ prng_lfsr[6] ^ prng_lfsr[12] ^ prng_lfsr[30];
 
 assign lfsrVal[31:0] = prng_lfsr[31:0];
+assign ldVal = 32'h00000000;
 
 assign psrByte[7:0] = 8'b00000000;
 //prng_lfsr[7:0] ^ prng_lfsr[15:8] ^
@@ -22,10 +23,8 @@ wire [31:0] prng_lfsr_next = (ldLFSR) ? ldVal[31:0] :
 
 always @(posedge clk or posedge rst)
 begin
-	if(rst) begin
+	if(rst) 
 		prng_lfsr <= 32'h00000000;
-		lfsrVal <= 32'h00000000;
-	end
 	else
 		prng_lfsr <= prng_lfsr_next;
 end
