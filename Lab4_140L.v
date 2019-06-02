@@ -280,9 +280,9 @@ module scctrl (
 
 
 reg [3:0] state;
-//s0 start
-//s1 read encrypt input
-//s2 encrypt and output
+//idle start
+//encrypt read encrypt input
+//decrypt encrypt and output
 parameter idle = 0, encrypt = 1, decrypt = 2, s3 = 3, s4 = 4, s5 = 5, 
 		  s6 = 6, s7 = 7, s8 = 8, s9 = 9, s10 = 10, s11 = 11;
 
@@ -320,23 +320,23 @@ always @(bu_rx_data_rdy or rst) begin
 		case(state)
 			idle:begin
 				if(de_bigE)
-					state <= s1;
+					state <= encrypt;
 				else if(de_bigD)
-					state <= s2;
+					state <= decrypt;
 				else
-					state <= s0;
+					state <= idle;
 			end
 			encrypt:begin
 				if(de_cr)
-					state <= s0;
+					state <= idle;
 				else
-					state <= s1;
+					state <= encrypt;
 			end
 			decrypt:begin
 				if(de_cr)
-					state <= s0;
+					state <= idle;
 				else
-					state <= s2;
+					state <= decrypt;
 			end
 		endcase
 	end
