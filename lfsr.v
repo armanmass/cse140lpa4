@@ -18,7 +18,7 @@ assign psrByte[7:0] = 8'b00000000;
 //					  prng_lfsr[23:16] ^ {1'b1, prng_lfsr[30:24]};
 
 wire [31:0] prng_lfsr_next = (ldLFSR) ? ldVal[31:0] :
-					  (step) ? {prng_lfsr[30:0], new_bit} : prng_lfsr[31:0];
+					  		 (step) ? {prng_lfsr[30:0], new_bit} : prng_lfsr[31:0];
 
 always @(posedge clk or posedge rst)
 begin
