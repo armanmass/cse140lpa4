@@ -313,17 +313,20 @@ assign L4_led[4] = (state == idle);
 
 assign L4_PrintBuf = de_cr; 
 reg inE;
+integer count;
 always @(bu_rx_data_rdy or rst) begin
 	if(rst) begin
 		state <= idle;
-		inE = 1'b0;
+		count <= 0;
+		inE <= 1'b0;
 	end
 	else begin
 		case(state)
 			idle:begin
 				if(de_bigE)begin
 					state <= encrypt;
-					inE = 1'b0;
+					inE <= 1'b0;
+					count <= 0;
 				end
 				else if(de_bigD)
 					state <= decrypt;
@@ -335,11 +338,14 @@ always @(bu_rx_data_rdy or rst) begin
 			encrypt:begin
 				if(de_cr) begin
 					state <= idle;
-					inE = 1'b0;
+					inE <= 1'b0;
 				end
 				else begin
 					state <= encrypt;
-					inE = 1'b1;
+					if(count == 1)
+						inE <= 1'b1;
+					if(count == 0)
+						count <= 1;					
 				end
 			end
 			decrypt:begin
@@ -404,5 +410,5 @@ regrce r1 (.q(delay1), .d(sccEldByte), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r2 (.q(delay2), .d(delay1), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r3 (.q(delay3), .d(delay2), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
-assign L4_tx_data_rdy = delay2 || delay3;
+assign L4_tx_data_rdy = ((delay3 || delay4) & inE);
 endmodule // scctrl

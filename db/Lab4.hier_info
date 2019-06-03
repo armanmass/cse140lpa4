@@ -405,7 +405,7 @@ bu_rx_data[4] => bu_rx_data[4].IN3
 bu_rx_data[5] => bu_rx_data[5].IN3
 bu_rx_data[6] => bu_rx_data[6].IN3
 bu_rx_data[7] => bu_rx_data[7].IN3
-L4_tx_data_rdy <= <GND>
+L4_tx_data_rdy <= scctrl:scctrl.L4_tx_data_rdy
 L4_tx_data[0] <= scdp:scdp.L4_tx_data
 L4_tx_data[1] <= scdp:scdp.L4_tx_data
 L4_tx_data[2] <= scdp:scdp.L4_tx_data
@@ -415,11 +415,11 @@ L4_tx_data[5] <= scdp:scdp.L4_tx_data
 L4_tx_data[6] <= scdp:scdp.L4_tx_data
 L4_tx_data[7] <= scdp:scdp.L4_tx_data
 L4_PrintBuf <= scctrl:scctrl.L4_PrintBuf
-L4_led[0] <= <GND>
-L4_led[1] <= <GND>
-L4_led[2] <= <GND>
-L4_led[3] <= <GND>
-L4_led[4] <= <GND>
+L4_led[0] <= scctrl:scctrl.L4_led
+L4_led[1] <= scctrl:scctrl.L4_led
+L4_led[2] <= scctrl:scctrl.L4_led
+L4_led[3] <= scctrl:scctrl.L4_led
+L4_led[4] <= scctrl:scctrl.L4_led
 
 
 |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp
@@ -1312,11 +1312,11 @@ charDataValid => de_cr.IN1
 
 
 |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl
-sccEncrypt <= sccEncrypt.DB_MAX_OUTPUT_PORT_TYPE
+sccEncrypt <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 sccEldByte <= sccEldByte.DB_MAX_OUTPUT_PORT_TYPE
 sccEmsBitsLd <= sccEldByte.DB_MAX_OUTPUT_PORT_TYPE
 sccElsBitsLd <= sccEldByte.DB_MAX_OUTPUT_PORT_TYPE
-sccEmsBitsSl <= sccEldByte.DB_MAX_OUTPUT_PORT_TYPE
+sccEmsBitsSl <= EmsBitsSl.DB_MAX_OUTPUT_PORT_TYPE
 sccDecrypt <= <GND>
 sccDnibble1En <= <GND>
 sccDnibble2En <= <GND>
@@ -1329,6 +1329,7 @@ sccLdKey[5] <= <GND>
 sccLdKey[6] <= <GND>
 sccLdKey[7] <= <GND>
 sccLdLFSR <= <GND>
+L4_tx_data_rdy <= L4_tx_data_rdy.DB_MAX_OUTPUT_PORT_TYPE
 bu_rx_data[0] => ~NO_FANOUT~
 bu_rx_data[1] => ~NO_FANOUT~
 bu_rx_data[2] => ~NO_FANOUT~
@@ -1338,25 +1339,79 @@ bu_rx_data[5] => ~NO_FANOUT~
 bu_rx_data[6] => ~NO_FANOUT~
 bu_rx_data[7] => ~NO_FANOUT~
 bu_rx_data_rdy => sccEldByte.IN1
-scdCharIsValid => sccEldByte.IN0
+scdCharIsValid => sccEldByte.IN1
 de_validAscii => ~NO_FANOUT~
-de_bigD => state.DATAA
-de_bigD => state.DATAA
+de_bigD => state.OUTPUTSELECT
+de_bigD => state.OUTPUTSELECT
 de_bigE => state.OUTPUTSELECT
 de_bigE => state.OUTPUTSELECT
-de_bigE => Selector1.IN2
-de_bigL => ~NO_FANOUT~
+de_bigE => Selector0.IN5
+de_bigE => Selector4.IN5
+de_bigL => state.DATAA
+de_bigL => state.DATAA
 de_bigP => ~NO_FANOUT~
 de_bigS => ~NO_FANOUT~
-de_hex => ~NO_FANOUT~
-de_cr => Selector0.IN1
+de_hex => Mux3.IN15
+de_hex => Mux4.IN14
+de_hex => Mux0.IN13
+de_hex => Mux2.IN15
+de_hex => Mux0.IN14
+de_hex => Mux4.IN15
+de_hex => Mux0.IN15
+de_hex => Mux0.IN8
+de_hex => Mux0.IN9
+de_hex => Mux0.IN10
+de_hex => Mux4.IN10
+de_hex => Mux4.IN11
+de_hex => Mux3.IN14
+de_cr => inE.IN1
 de_cr => L4_PrintBuf.DATAIN
-de_cr => Selector2.IN2
 de_cr => Selector1.IN1
+de_cr => count[0].IN1
+de_cr => Mux0.IN11
+de_cr => Mux0.IN12
+de_cr => Mux4.IN12
+de_cr => Mux4.IN13
+de_cr => Mux2.IN14
 L4_PrintBuf <= de_cr.DB_MAX_OUTPUT_PORT_TYPE
-rst => state.s0.OUTPUTSELECT
-rst => state.s1.OUTPUTSELECT
-rst => state.s2.OUTPUTSELECT
-clk => ~NO_FANOUT~
+L4_led[0] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+L4_led[1] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+L4_led[2] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+L4_led[3] <= <GND>
+L4_led[4] <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
+rst => rst.IN4
+clk => clk.IN4
+
+
+|latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q.DATAB
+ce => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+clk => q[0]~reg0.CLK
+
+
+|latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q.DATAB
+ce => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+clk => q[0]~reg0.CLK
+
+
+|latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q.DATAB
+ce => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+clk => q[0]~reg0.CLK
+
+
+|latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d[0] => q.DATAB
+ce => q.OUTPUTSELECT
+rst => q.OUTPUTSELECT
+clk => q[0]~reg0.CLK
 
 
