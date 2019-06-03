@@ -12,18 +12,18 @@
 @W: CG1273 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":48:21:48:23|An input port (port pin) is the target of an assignment - please check if this is intentional
 @W: CG360 :"C:\Users\Arman\Desktop\Lab4\uarttxbuf.v":77:22:77:28|Removing wire txState, as there is no assignment to it.
 @W: CL265 :"C:\Users\Arman\Desktop\Lab4\buart.v":185:2:185:7|Removing unused bit 2 of hh[2:0]. Either assign all bits or reduce the width of the signal.
-@W: CG296 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":325:9:325:30|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
-@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":338:12:338:18|Referenced variable de_bigD is not in sensitivity list.
-@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":336:7:336:13|Referenced variable de_bigE is not in sensitivity list.
-@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":340:12:340:18|Referenced variable de_bigL is not in sensitivity list.
-@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":360:13:360:18|Referenced variable de_hex is not in sensitivity list.
-@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":349:7:349:11|Referenced variable de_cr is not in sensitivity list.
-@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":334:7:334:11|Referenced variable state is not in sensitivity list.
-@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:1:326:2|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
-@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:1:326:2|Latch generated from always block for signal EmsLoaded; possible missing assignment in an if or case statement.
-@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:1:326:2|Latch generated from always block for signal sccLdKey[7:0]; possible missing assignment in an if or case statement.
-@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:1:326:2|Latch generated from always block for signal nibbleIn2; possible missing assignment in an if or case statement.
-@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:1:326:2|Latch generated from always block for signal nibbleIn1; possible missing assignment in an if or case statement.
-@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:1:326:2|Latch generated from always block for signal LdLFSR; possible missing assignment in an if or case statement.
+@W: CG296 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":326:9:326:30|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":339:12:339:18|Referenced variable de_bigD is not in sensitivity list.
+@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":337:7:337:13|Referenced variable de_bigE is not in sensitivity list.
+@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":341:12:341:18|Referenced variable de_bigL is not in sensitivity list.
+@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":361:13:361:18|Referenced variable de_hex is not in sensitivity list.
+@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":350:7:350:11|Referenced variable de_cr is not in sensitivity list.
+@W: CG290 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":335:7:335:11|Referenced variable state is not in sensitivity list.
+@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":327:1:327:2|Latch generated from always block for signal next_state[3:0]; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":327:1:327:2|Latch generated from always block for signal EmsLoaded; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":327:1:327:2|Latch generated from always block for signal sccLdKey[7:0]; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":327:1:327:2|Latch generated from always block for signal nibbleIn2; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":327:1:327:2|Latch generated from always block for signal nibbleIn1; possible missing assignment in an if or case statement.
+@W: CL118 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":327:1:327:2|Latch generated from always block for signal LdLFSR; possible missing assignment in an if or case statement.
 @W: CG360 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":20:12:20:24|Removing wire sccDByteValid, as there is no assignment to it.
 

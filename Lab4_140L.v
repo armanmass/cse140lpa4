@@ -230,7 +230,7 @@ module scdp (
 		  .psrByte(psrByte),
 		  .ldVal({key3, key2, key1, key0}),
 		  .ldLFSR(sccLdLFSR),
-		  .step(sccDnibble2En | sccEldByte),
+		  .step(sccDnibble2En & sccEldByte),
 		  .rst(rst),
 		  .clk(clk)
 		  );
@@ -304,7 +304,7 @@ assign sccLdLFSR = LdLFSR;
 
 always @(posedge clk) begin
 	if(rst) begin
-		EmsBitsSl <= 1'b1;
+		EmsBitsSl <= 1'b0;
 		state <= idle;
 	end
 	else begin
@@ -314,9 +314,10 @@ always @(posedge clk) begin
 end
 
 
-assign L4_led[0] = (state == (encrypt || decrypt || load));
-assign L4_led[1] = (state == (encrypt || decrypt));
-assign L4_led[2] = (state == load);
+assign L4_led[0] = sccEncrypt;
+assign L4_led[1] = sccDecrypt;
+assign L4_led[2] = ((state == load) || (state == load2) || (state == load3) || (state == load4) || 
+					(state == load5) || (state == load6) || (state == load7) || (state == load8) || (state == load9));
 assign L4_led[3] = 1'b0;
 assign L4_led[4] = (state == idle);
 

@@ -1,0 +1,46 @@
+Running in Lattice mode
+
+
+Starting:    C:\lscc\iCEcube2.2017.08\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\iCEcube2.2017.08\synpbase
+Hostname:    ARMAN-PC
+Date:        Mon Jun 03 04:41:46 2019
+Version:     L-2016.09L+ice40
+
+Arguments:   -product synplify_pro -batch Lab4prj_syn.prj
+ProductType: synplify_pro
+
+
+
+
+
+log file: "C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.srr"
+Running: Lab4prj_Implmnt in foreground
+
+Running Lab4prj_syn|Lab4prj_Implmnt
+
+Running: compile (Compile) on Lab4prj_syn|Lab4prj_Implmnt
+# Mon Jun 03 04:41:46 2019
+
+Running: compile_flow (Compile Process) on Lab4prj_syn|Lab4prj_Implmnt
+# Mon Jun 03 04:41:46 2019
+
+Running: compiler (Compile Input) on Lab4prj_syn|Lab4prj_Implmnt
+# Mon Jun 03 04:41:46 2019
+compiler exited with errors
+Job failed on: Lab4prj_syn|Lab4prj_Implmnt
+
+Job: "compiler" terminated with error status: 2
+See log file: "C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\Lab4prj_compiler.srr"
+# Mon Jun 03 04:41:46 2019
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on Lab4prj_syn|Lab4prj_Implmnt
+Complete: Compile on Lab4prj_syn|Lab4prj_Implmnt
+Complete: Logic Synthesis on Lab4prj_syn|Lab4prj_Implmnt
+
+exit status=2
+
+exit status=2
+

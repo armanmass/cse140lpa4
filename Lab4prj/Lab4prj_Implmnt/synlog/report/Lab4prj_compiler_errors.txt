@@ -1,0 +1,2 @@
+@E: CG301 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":305:9:305:27|Can't mix posedge/negedge use with plain signal references
+

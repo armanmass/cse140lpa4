@@ -6,7 +6,7 @@
 
 * Build Date:         Sep 11 2017 16:52:36
 
-* File Generated:     Jun 3 2019 04:04:51
+* File Generated:     Jun 3 2019 04:43:01
 
 * Purpose:            General info of design implementation
 
@@ -17,7 +17,7 @@
 Synthesis/Placement Summary:
 ----------------------------
     Status:  Successful
-    Runtime: 1 seconds
+    Runtime: 0 seconds
 
 Device Info:
 ------------
@@ -27,8 +27,8 @@ Device Info:
 
 Design statistics:
 ------------------
-    FFs:                  229
-    LUTs:                 619
+    FFs:                  248
+    LUTs:                 665
     RAMs:                 1
     IOBs:                 10
     GBs:                  4
@@ -37,12 +37,12 @@ Design statistics:
 
 Logic Resource Utilization:
 ---------------------------
-    Total Logic Cells: 623/1280
-        Combinational Logic Cells: 394      out of   1280      30.7813%
-        Sequential Logic Cells:    229      out of   1280      17.8906%
-        Logic Tiles:               111      out of   160       69.375%
+    Total Logic Cells: 668/1280
+        Combinational Logic Cells: 420      out of   1280      32.8125%
+        Sequential Logic Cells:    248      out of   1280      19.375%
+        Logic Tiles:               107      out of   160       66.875%
     Registers: 
-        Logic Registers:           229      out of   1280      17.8906%
+        Logic Registers:           248      out of   1280      19.375%
         IO Registers:              1        out of   560       0.178571
     Block RAMs:                    1        out of   16        6.25%
     Warm Boots:                    0        out of   1         0%
@@ -86,9 +86,9 @@ Detailed I/O Info:
 
 Detailed Global Buffer Info:
 ----------------------------
-    Buffer Number  IO Bank  Driven By  Fanout  Signal Name                            
-    -------------  -------  ---------  ------  -----------                            
-    3              3                   21      N_41_i_g                               
-    4              0                   232     clk_g                                  
-    1              0                   31      Lab_UT.scdp.lfsrInst.un1_ldLFSR_1_i_g  
-    6              3                   171     resetGen_rst_0_iso_g                   
+    Buffer Number  IO Bank  Driven By  Fanout  Signal Name           
+    -------------  -------  ---------  ------  -----------           
+    4              0                   251     clk_g                 
+    6              3                   198     resetGen_rst_1_iso_g  
+    3              3                   33      N_76_i_g              
+    1              0                   31      Lab_UT.sccLdLFSR_g    

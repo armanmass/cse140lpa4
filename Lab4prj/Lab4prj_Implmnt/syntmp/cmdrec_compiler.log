@@ -1,16 +1,16 @@
 C:\lscc\iCEcube2.2017.08\synpbase\bin64\c_hdl.exe  -osyn  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_comp.srs  -hdllog  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\Lab4prj_compiler.srr  -encrypt  -mp  4  -verification_mode 0  -verilog  -prodtype  synplify_pro  -primux -fixsmult -infer_seqShift -ice -sdff_counter -nram -divnmod -nostructver   -I C:\Users\Arman\Desktop\Lab4\Lab4prj\  -I C:\lscc\iCEcube2.2017.08\synpbase\lib   -v2001  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -encrypt  -pro  -dmgen  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\dm  -ui -fid2 -ram -sharing on -ll 2000 -autosm  -lib work C:\Users\Arman\Desktop\Lab4\Lab4_140L.v -lib work C:\Users\Arman\Desktop\Lab4\asciiHex2Bin.v -lib work C:\Users\Arman\Desktop\Lab4\bin2AsciiHex.v -lib work C:\Users\Arman\Desktop\Lab4\buart.v -lib work C:\Users\Arman\Desktop\Lab4\decodeKeysL4.v -lib work C:\Users\Arman\Desktop\Lab4\fifo.v -lib work C:\Users\Arman\Desktop\Lab4\latticehx1k.v -lib work C:\Users\Arman\Desktop\Lab4\lfsr.v -lib work C:\Users\Arman\Desktop\Lab4\printable.v -lib work C:\Users\Arman\Desktop\Lab4\regrce.v -lib work C:\Users\Arman\Desktop\Lab4\uarttxbuf.v 
 rc:0 success:1 runtime:1
-file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_comp.srs|io:o|time:1559559793|size:38495|exec:0
-file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\Lab4prj_compiler.srr|io:o|time:1559559793|size:13796|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_comp.srs|io:o|time:1559562140|size:38503|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\Lab4prj_compiler.srr|io:o|time:1559562140|size:13796|exec:0
 file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1559532726|size:224837|exec:0
-file:C:\Users\Arman\Desktop\Lab4\Lab4_140L.v|io:i|time:1559559254|size:12669|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4_140L.v|io:i|time:1559562137|size:12788|exec:0
 file:C:\Users\Arman\Desktop\Lab4\asciiHex2Bin.v|io:i|time:1558843245|size:421|exec:0
 file:C:\Users\Arman\Desktop\Lab4\bin2AsciiHex.v|io:i|time:1558843245|size:958|exec:0
 file:C:\Users\Arman\Desktop\Lab4\buart.v|io:i|time:1558843245|size:6512|exec:0
 file:C:\Users\Arman\Desktop\Lab4\decodeKeysL4.v|io:i|time:1558843245|size:4048|exec:0
 file:C:\Users\Arman\Desktop\Lab4\fifo.v|io:i|time:1558843245|size:1057|exec:0
 file:C:\Users\Arman\Desktop\Lab4\latticehx1k.v|io:i|time:1559559790|size:9654|exec:0
-file:C:\Users\Arman\Desktop\Lab4\lfsr.v|io:i|time:1559554177|size:889|exec:0
+file:C:\Users\Arman\Desktop\Lab4\lfsr.v|io:i|time:1559561035|size:888|exec:0
 file:C:\Users\Arman\Desktop\Lab4\printable.v|io:i|time:1558843245|size:566|exec:0
 file:C:\Users\Arman\Desktop\Lab4\regrce.v|io:i|time:1558843245|size:1706|exec:0
 file:C:\Users\Arman\Desktop\Lab4\uarttxbuf.v|io:i|time:1558843245|size:7511|exec:0

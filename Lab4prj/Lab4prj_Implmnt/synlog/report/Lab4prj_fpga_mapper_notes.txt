@@ -10,35 +10,46 @@
 @N: BN362 :"c:\users\arman\desktop\lab4\regrce.v":47:3:47:8|Removing sequential instance Lab_UT.scdp.k3h.q[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\uarttxbuf.v":58:3:58:8|Removing sequential instance ufifo.txdataD[7] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\latticehx1k.v":85:3:85:8|Removing sequential instance resetGen.rst (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_1[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[7] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[6] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[5] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[7] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[6] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[4] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
 @N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
-@N: FX271 :"c:\users\arman\desktop\lab4\latticehx1k.v":85:3:85:8|Replicating instance resetGen.rst_0 (in view: work.latticehx1k(verilog)) with 179 loads 1 time to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[2] (in view: work.latticehx1k(verilog)) with 17 loads 1 time to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_ret_1 (in view: work.latticehx1k(verilog)) with 10 loads 1 time to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[0] (in view: work.latticehx1k(verilog)) with 22 loads 2 times to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[1] (in view: work.latticehx1k(verilog)) with 9 loads 1 time to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[3] (in view: work.latticehx1k(verilog)) with 13 loads 1 time to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance resetGen.state_ret_5 (in view: work.latticehx1k(verilog)) with 36 loads 3 times to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance Lab_UT.scctrl.state_ret_8 (in view: work.latticehx1k(verilog)) with 45 loads 3 times to improve timing.
-@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance Lab_UT.scctrl.state_ret_13 (in view: work.latticehx1k(verilog)) with 37 loads 3 times to improve timing.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_0[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_0[6] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_0[7] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_0[5] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_1[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[2] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\latticehx1k.v":85:3:85:8|Removing sequential instance resetGen.rst_0 (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_1[6] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_1[3] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Removing sequential instance buart._rx.shifter_0[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[1] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: BN362 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Removing sequential instance Lab_UT.scctrl.state_0[0] (in view: work.latticehx1k(verilog)) because it does not drive other instances.
+@N: FX271 :"c:\users\arman\desktop\lab4\latticehx1k.v":85:3:85:8|Replicating instance resetGen.rst_1 (in view: work.latticehx1k(verilog)) with 197 loads 1 time to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_ret_0 (in view: work.latticehx1k(verilog)) with 21 loads 2 times to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[2] (in view: work.latticehx1k(verilog)) with 13 loads 1 time to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_1[0] (in view: work.latticehx1k(verilog)) with 10 loads 1 time to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_0[1] (in view: work.latticehx1k(verilog)) with 19 loads 1 time to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|Replicating instance buart._rx.shifter_2[6] (in view: work.latticehx1k(verilog)) with 12 loads 1 time to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance Lab_UT.scctrl.state_ret (in view: work.latticehx1k(verilog)) with 43 loads 3 times to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance Lab_UT.scctrl.state_ret_0 (in view: work.latticehx1k(verilog)) with 16 loads 1 time to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance Lab_UT.scctrl.state_2[3] (in view: work.latticehx1k(verilog)) with 31 loads 2 times to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance resetGen.state_1_ret (in view: work.latticehx1k(verilog)) with 29 loads 2 times to improve timing.
+@N: FX271 :"c:\users\arman\desktop\lab4\lab4_140l.v":305:0:305:5|Replicating instance Lab_UT.scctrl.state_1[2] (in view: work.latticehx1k(verilog)) with 38 loads 3 times to improve timing.
 @N: FX1017 :"c:\users\arman\desktop\lab4\latticehx1k.v":284:14:284:33|SB_GB inserted on the net clk.
-@N: FX1017 :"c:\users\arman\desktop\lab4\latticehx1k.v":85:3:85:8|SB_GB inserted on the net resetGen.rst_0_iso.
-@N: FX1017 :|SB_GB inserted on the net Lab_UT.scdp.lfsrInst.un1_ldLFSR_1_i.
-@N: FX1017 :|SB_GB inserted on the net N_41_i.
+@N: FX1017 :"c:\users\arman\desktop\lab4\latticehx1k.v":85:3:85:8|SB_GB inserted on the net resetGen.rst_1_iso.
+@N: FX1017 :|SB_GB inserted on the net N_76_i.
+@N: FX1017 :|SB_GB inserted on the net Lab_UT.sccLdLFSR.
 @N: MT611 :|Automatically generated clock latticehx1k_pll|PLLOUTCORE_derived_clock is not used and is being removed
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 

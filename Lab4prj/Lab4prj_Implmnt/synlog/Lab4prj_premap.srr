@@ -1,4 +1,4 @@
-# Mon Jun 03 04:03:15 2019
+# Mon Jun 03 04:42:22 2019
 
 Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
 Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
@@ -43,7 +43,7 @@ latticehx1k_pll|PLLOUTCORE_derived_clock     124.6 MHz     8.028         derived
 latticehx1k|clk_in                           124.6 MHz     8.028         inferred                              Autoconstr_clkgroup_0     0    
 ==============================================================================================================================================
 
-@W: MT531 :"c:\users\arman\desktop\lab4\lab4_140l.v":326:1:326:2|Found signal identified as System clock which controls 16 sequential elements including Lab_UT.scctrl.next_state[3:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT531 :"c:\users\arman\desktop\lab4\lab4_140l.v":327:1:327:2|Found signal identified as System clock which controls 16 sequential elements including Lab_UT.scctrl.next_state[3:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
 
 Finished Pre Mapping Phase.
 @N: BN225 |Writing default property annotation file C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.sap.
@@ -76,6 +76,6 @@ Pre-mapping successful!
 At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon Jun 03 04:03:15 2019
+# Mon Jun 03 04:42:22 2019
 
 ###########################################################]

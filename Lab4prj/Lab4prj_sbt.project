@@ -32,7 +32,7 @@ Version=Lattice Semiconductor Corporation iCEcube - Release: 2017.08.27940 - Bui
 ProjectName=Lab4prj
 Vendor=SiliconBlue
 Synthesis=synplify
-ProjectVFiles=../Lab4_140L.v,../asciiHex2Bin.v,../bin2AsciiHex.v,../buart.v,../decodeKeysL4.v,../fifo.v,../latticehx1k.v,../lfsr.v,../printable.v,../regrce.v,../uarttxbuf.v
+ProjectVFiles=../Lab4_140L.v=work,../asciiHex2Bin.v=work,../bin2AsciiHex.v=work,../buart.v=work,../decodeKeysL4.v=work,../fifo.v=work,../latticehx1k.v=work,../lfsr.v=work,../printable.v=work,../regrce.v=work,../uarttxbuf.v=work
 ProjectCFiles=
 CurImplementation=Lab4prj_Implmnt
 Implementations=Lab4prj_Implmnt
