@@ -312,17 +312,19 @@ assign L4_led[3] = 1'b0;
 assign L4_led[4] = (state == idle);
 
 assign L4_PrintBuf = de_cr; 
-
-
+reg inE;
 always @(bu_rx_data_rdy or rst) begin
 	if(rst) begin
 		state <= idle;
+		inE = 1'b0;
 	end
 	else begin
 		case(state)
 			idle:begin
-				if(de_bigE)
+				if(de_bigE)begin
 					state <= encrypt;
+					inE = 1'b0;
+				end
 				else if(de_bigD)
 					state <= decrypt;
 				else if(de_bigL)
@@ -331,10 +333,14 @@ always @(bu_rx_data_rdy or rst) begin
 					state <= idle;
 			end
 			encrypt:begin
-				if(de_cr)
+				if(de_cr) begin
 					state <= idle;
-				else
+					inE = 1'b0;
+				end
+				else begin
 					state <= encrypt;
+					inE = 1'b1;
+				end
 			end
 			decrypt:begin
 				if(de_cr)
