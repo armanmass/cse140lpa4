@@ -1,0 +1,45 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":698:7:698:19|Synthesizing module SB_PLL40_CORE in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":274:7:274:21|Synthesizing module latticehx1k_pll in library work.
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":501:7:501:11|Synthesizing module SB_IO in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":42:7:42:11|Synthesizing module inpin in library work.
+@N: CG364 :"C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v":1124:7:1124:17|Synthesizing module SB_RAM512x8 in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\fifo.v":8:7:8:10|Synthesizing module fifo in library work.
+@N: CG179 :"C:\Users\Arman\Desktop\Lab4\fifo.v":36:14:36:19|Removing redundant assignment.
+@N: CG179 :"C:\Users\Arman\Desktop\Lab4\fifo.v":41:14:41:19|Removing redundant assignment.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\uarttxbuf.v":242:7:242:12|Synthesizing module tx_fsm in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\uarttxbuf.v":173:7:173:18|Synthesizing module emitcrlf_fsm in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\uarttxbuf.v":13:7:13:15|Synthesizing module uartTxBuf in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\buart.v":62:7:62:14|Synthesizing module baudgen2 in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\buart.v":132:7:132:12|Synthesizing module rxuart in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\buart.v":42:7:42:13|Synthesizing module baudgen in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\buart.v":91:7:91:10|Synthesizing module uart in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\buart.v":199:7:199:11|Synthesizing module buart in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":318:7:318:19|Synthesizing module N_bit_counter in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":64:7:64:14|Synthesizing module resetGen in library work.
+@N: CG179 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":88:32:88:42|Removing redundant assignment.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\asciiHex2Bin.v":6:7:6:18|Synthesizing module asciiHex2Bin in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\regrce.v":39:7:39:12|Synthesizing module regrce in library work.
+@N: CG179 :"C:\Users\Arman\Desktop\Lab4\regrce.v":54:9:54:9|Removing redundant assignment.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\printable.v":7:7:7:15|Synthesizing module printable in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\regrce.v":39:7:39:12|Synthesizing module regrce in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\bin2AsciiHex.v":6:7:6:18|Synthesizing module bin2AsciiHex in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\regrce.v":39:7:39:12|Synthesizing module regrce in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\lfsr.v":1:7:1:10|Synthesizing module lfsr in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":111:7:111:10|Synthesizing module scdp in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\decodeKeysL4.v":36:7:36:18|Synthesizing module decodeKeysL4 in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":250:7:250:12|Synthesizing module scctrl in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":1:7:1:15|Synthesizing module Lab4_140L in library work.
+@N: CG364 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":97:7:97:17|Synthesizing module latticehx1k in library work.
+@N: CL159 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":264:15:264:24|Input bu_rx_data is unused.
+@N: CL159 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":268:9:268:21|Input de_validAscii is unused.
+@N: CL159 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":272:9:272:15|Input de_bigP is unused.
+@N: CL159 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":273:9:273:15|Input de_bigS is unused.
+@N: CL159 :"C:\Users\Arman\Desktop\Lab4\Lab4_140L.v":125:15:125:24|Input sccDecrypt is unused.
+@N: CL201 :"C:\Users\Arman\Desktop\Lab4\uarttxbuf.v":229:3:229:8|Trying to extract state machine for register cstate.
+@N: CL201 :"C:\Users\Arman\Desktop\Lab4\uarttxbuf.v":354:3:354:8|Trying to extract state machine for register cstate.
+@N|Running in 64-bit mode
+@N: NF107 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":97:7:97:17|Selected library: work cell: latticehx1k view verilog as top level
+@N: NF107 :"C:\Users\Arman\Desktop\Lab4\latticehx1k.v":97:7:97:17|Selected library: work cell: latticehx1k view verilog as top level
+

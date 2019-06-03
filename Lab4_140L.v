@@ -256,7 +256,7 @@ module scctrl (
 		 output sccDecrypt,
 		 output sccDnibble1En,
 		 output sccDnibble2En,
-		 output [7:0] sccLdKey,
+		 output reg [7:0] sccLdKey,
 		 output sccLdLFSR,
 		
 		 //output [7:0] L4_tx_data,
@@ -283,19 +283,24 @@ module scctrl (
 
 
 reg [3:0] state, next_state;
-//idle start
-//encrypt read encrypt input
-//decrypt encrypt and output
-parameter idle = 0, encrypt = 1, decrypt = 2, load = 3, load1 = 4, load2 = 5, 
-		  load3 = 6, load4 = 7, load5 = 8, load6 = 9, load7 = 10, load8 = 11, load9 = 12;
+reg EmsBitsSl, EmsLoaded, LdLFSR, nibbleIn1, nibbleIn2;
+
+parameter [3:0] idle = 4'b0000, encrypt = 4'b0001, decrypt = 4'b0010, load = 4'b0011, load1 = 4'b0100, load2 = 4'b0101, 
+		  load3 = 4'b0110, load4 = 4'b0111, load5 = 4'b1000, load6 = 4'b1001, load7 = 4'b1010, load8 = 4'b1011, load9 = 4'b1100, decrypt2 = 4'b1101;
+
 
 assign sccEncrypt = (state == encrypt);
 assign sccEldByte = (sccEncrypt & scdCharIsValid & bu_rx_data_rdy);
-assign sccEmsBitsLd = sccEldByte;
-assign sccElsBitsLd = sccEldByte;
+assign sccEmsBitsLd = sccEncrypt & EmsLoaded;
+assign sccElsBitsLd = sccEncrypt & EmsLoaded;
+assign sccEmsBitsSl = EmsBitsSl;
 
-reg EmsBitsSl;
-assign sccEmsBitsSl = EmsBitsSl; 
+assign sccDecrypt = ((state == decrypt) || (state == decrypt2));
+assign sccDnibble1En = nibbleIn1 & sccDecrypt;
+assign sccDnibble2En = nibbleIn2 & sccDecrypt;
+
+assign sccLdLFSR = LdLFSR;
+
 
 always @(posedge clk) begin
 	if(rst) begin
@@ -318,8 +323,13 @@ assign L4_led[4] = (state == idle);
 assign L4_PrintBuf = de_cr; 
 
 always @(bu_rx_data_rdy or rst) begin
-	if(rst)
+	if(rst) begin
 		next_state <= idle;
+		EmsLoaded <= 1'b0;
+		LdLFSR <= 1'b0;
+		nibbleIn1 <=  1'b0;
+		nibbleIn2 <=  1'b0;
+	end
 	else begin
 		case(state)
 			idle:begin
@@ -329,72 +339,111 @@ always @(bu_rx_data_rdy or rst) begin
 					next_state <= decrypt;
 				else if(de_bigL)
 					next_state <= load;
-				else
+				else begin
 					next_state <= idle;
+					sccLdKey <= 8'b00000000;
+					LdLFSR <= 1'b0;
+				end
 			end
 			encrypt:begin
 				if(de_cr)
 					next_state <= idle;
-				else
+				else begin
 					next_state <= encrypt;
+					EmsLoaded <= 1'b1;
+				end
 			end
 			decrypt:begin
+				nibbleIn2 <= 1'b0;
 				if(de_cr)
 					next_state <= idle;
+				else if (de_hex) begin
+					next_state <= decrypt2;
+					nibbleIn1 <= 1'b1;
+				end
 				else
 					next_state <= decrypt;
 			end
+			decrypt2:begin
+				nibbleIn1 <= 1'b0;
+				if(de_cr)
+					next_state <= idle;
+				else if(de_hex) begin
+					next_state <= decrypt;
+					nibbleIn2 <= 1'b1;
+				end
+				else
+					next_state <= decrypt2;
+			end
 			load:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load2;
+					sccLdKey <= 8'b10000000;
+				end
 				else
 					next_state <= load;
 			end
 			load2:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load3;
+					sccLdKey <= 8'b01000000;
+				end
 				else
 					next_state <= load2;
 			end
 			load3:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load4;
+					sccLdKey <= 8'b00100000;
+				end
 				else
 					next_state <= load3;
 			end
 			load4:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load5;
+					sccLdKey <= 8'b00010000;
+				end
 				else
 					next_state <= load4;
 			end
 			load5:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load6;
+					sccLdKey <= 8'b00001000;
+				end
 				else
 					next_state <= load5;
 			end
 			load6:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load7;
+					sccLdKey <= 8'b00000100;
+				end
 				else
 					next_state <= load6;
 			end
 			load7:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load8;
+					sccLdKey <= 8'b00000010;
+				end
 				else
 					next_state <= load7;
 			end
 			load8:begin
-				if(de_hex)
+				if(de_hex) begin
 					next_state <= load9;
+					sccLdKey <= 8'b00000001;
+				end
 				else
 					next_state <= load8;
 			end
 			load9:begin
-				if(de_cr)
+				if(de_cr) begin
 					next_state <= idle;
+					LdLFSR <= 1'b1;
+				end
 				else
 					next_state <= load9;
 			end
@@ -402,12 +451,14 @@ always @(bu_rx_data_rdy or rst) begin
 	end
 end
 
-wire delay1, delay2, delay3, delay4;
+wire delay1, delay2, delay3, delay4, delayload;
 regrce r1 (.q(delay1), .d(sccEldByte), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r2 (.q(delay2), .d(delay1), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r3 (.q(delay3), .d(delay2), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
 
-assign L4_tx_data_rdy = (delay3 || delay4);
+regrce r5 (.q(delayload), .d(sccDnibble2En), .ce(1'b1), .rst(rst), .clk(clk));
+
+assign L4_tx_data_rdy = (delay3 || delay4) || delayload;
 
 endmodule // scctrl

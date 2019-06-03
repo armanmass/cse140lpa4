@@ -13,9 +13,8 @@ wire new_bit = prng_lfsr[2] ^ prng_lfsr[5] ^ prng_lfsr[6] ^ prng_lfsr[12] ^ prng
 
 assign lfsrVal[31:0] = prng_lfsr[31:0];
 
-assign psrByte[7:0] = 8'b00000000;
-//prng_lfsr[7:0] ^ prng_lfsr[15:8] ^
-//					  prng_lfsr[23:16] ^ {1'b1, prng_lfsr[30:24]};
+assign psrByte[7:0] = prng_lfsr[7:0] ^ prng_lfsr[15:8] ^
+					  prng_lfsr[23:16] ^ {1'b1, prng_lfsr[30:24]};
 
 wire [31:0] prng_lfsr_next = (ldLFSR) ? ldVal[31:0] :
 					  		 (step) ? {prng_lfsr[30:0], new_bit} : prng_lfsr[31:0];

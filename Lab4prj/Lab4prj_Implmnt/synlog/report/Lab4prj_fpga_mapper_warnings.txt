@@ -1,0 +1,25 @@
+@W: FX1039 :"c:\users\arman\desktop\lab4\buart.v":185:2:185:7|User-specified initial value defined for instance buart._rx.hh[1:0] is being ignored. 
+@W: BN132 :"c:\users\arman\desktop\lab4\regrce.v":47:3:47:8|Removing instance Lab_UT.scdp.msBitsi.q[5] because it is equivalent to instance Lab_UT.scdp.lsBitsi.q[5]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.EmsLoaded
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.nibbleIn2
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdLFSR
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[0]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[1]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[2]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[3]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[4]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[5]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[6]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.sccLdKey[7]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.nibbleIn2
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.EmsLoaded
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[0]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[1]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[2]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[3]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[4]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[5]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[6]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdKey[7]
+@W: BN137 :|Found combinational loop during mapping at net Lab_UT.scctrl.sccLdLFSR
+@W: MT420 |Found inferred clock latticehx1k|clk_in with period 7.72ns. Please declare a user-defined clock on object "p:clk_in"

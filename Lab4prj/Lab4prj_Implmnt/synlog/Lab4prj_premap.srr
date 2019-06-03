@@ -1,0 +1,81 @@
+# Mon Jun 03 04:03:15 2019
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1612R, Built Dec  5 2016 10:31:39
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+Product Version L-2016.09L+ice40
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj_scck.rpt 
+Printing clock  summary report in "C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 101MB peak: 103MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 103MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 104MB)
+
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=16  set on top level netlist latticehx1k
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+
+
+Clock Summary
+*****************
+
+Start                                        Requested     Requested     Clock                                 Clock                     Clock
+Clock                                        Frequency     Period        Type                                  Group                     Load 
+----------------------------------------------------------------------------------------------------------------------------------------------
+System                                       1.0 MHz       1000.000      system                                system_clkgroup           16   
+latticehx1k_pll|PLLOUTCORE_derived_clock     124.6 MHz     8.028         derived (from latticehx1k|clk_in)     Autoconstr_clkgroup_0     199  
+latticehx1k|clk_in                           124.6 MHz     8.028         inferred                              Autoconstr_clkgroup_0     0    
+==============================================================================================================================================
+
+@W: MT531 :"c:\users\arman\desktop\lab4\lab4_140l.v":326:1:326:2|Found signal identified as System clock which controls 16 sequential elements including Lab_UT.scctrl.next_state[3:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+
+Finished Pre Mapping Phase.
+@N: BN225 |Writing default property annotation file C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.sap.
+
+Starting constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+Encoding state machine cstate[5:0] (in view: work.tx_fsm(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   100 -> 010000
+   101 -> 100000
+Encoding state machine cstate[3:0] (in view: work.emitcrlf_fsm(verilog))
+original code -> new code
+   00 -> 00
+   01 -> 01
+   10 -> 10
+   11 -> 11
+@N: MO225 :"c:\users\arman\desktop\lab4\uarttxbuf.v":229:3:229:8|There are no possible illegal states for state machine cstate[3:0] (in view: work.emitcrlf_fsm(verilog)); safe FSM implementation is not required.
+@N: BN362 :"c:\users\arman\desktop\lab4\lfsr.v":22:0:22:5|Removing sequential instance prng_lfsr[31] (in view: work.lfsr(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+None
+None
+
+Finished constraint checker (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 134MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 48MB peak: 134MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Jun 03 04:03:15 2019
+
+###########################################################]

@@ -1,0 +1,5 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: BN225 |Writing default property annotation file C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.sap.
+@N: MO225 :"c:\users\arman\desktop\lab4\uarttxbuf.v":229:3:229:8|There are no possible illegal states for state machine cstate[3:0] (in view: work.emitcrlf_fsm(verilog)); safe FSM implementation is not required.
+@N: BN362 :"c:\users\arman\desktop\lab4\lfsr.v":22:0:22:5|Removing sequential instance prng_lfsr[31] (in view: work.lfsr(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.

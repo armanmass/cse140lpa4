@@ -1,0 +1,13 @@
+C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt   -part iCE40HX1K  -package TQ144    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\report\Lab4prj_premap.xml  -oedif  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.edf  -conchk_prepass  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj_cck.rpt   -autoconstraint  -freq 1.000   C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_mult.srs  -flow prepass  -gcc_prepass  -osrd  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_prem.srd  -qsap  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.sap  -devicelib  C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v  -ologparam  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\syntmp\Lab4prj.plg  -osyn  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_prem.srd  -prjdir  C:\Users\Arman\Desktop\Lab4\Lab4prj\  -prjname  Lab4prj_syn  -log  C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\Lab4prj_premap.srr 
+rc:1 success:1 runtime:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.edf|io:o|time:0|size:0|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj_cck.rpt|io:o|time:1559559795|size:2842|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_mult.srs|io:i|time:1559559795|size:3858|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_prem.srd|io:o|time:1559559795|size:54369|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\Lab4prj.sap|io:o|time:1559559795|size:2823|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\lib\generic\sb_ice40.v|io:i|time:1559532726|size:224837|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\syntmp\Lab4prj.plg|io:o|time:1559559795|size:0|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synwork\Lab4prj_prem.srd|io:o|time:1559559795|size:54369|exec:0
+file:C:\Users\Arman\Desktop\Lab4\Lab4prj\Lab4prj_Implmnt\synlog\Lab4prj_premap.srr|io:o|time:1559559795|size:4800|exec:0
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin\m_generic.exe|io:i|time:1559532724|size:17853440|exec:1
+file:C:\lscc\iCEcube2.2017.08\synpbase\bin64\m_generic.exe|io:i|time:1559532725|size:32355840|exec:1

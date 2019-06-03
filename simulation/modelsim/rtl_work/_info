@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Arman/Desktop/Lab4/simulation/modelsim
 vasciiHex2Bin
-Z1 !s110 1559536221
+Z1 !s110 1559558590
 !i10b 1
 !s100 Va[>>Nh;NmZTZ0PZiiGLI2
 Id13bEHVNdz8^S]7^d5ZQe2
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1559536221.000000
+Z5 !s108 1559558590.000000
 !s107 C:/Users/Arman/Desktop/Lab4/asciiHex2Bin.v|
 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab4/asciiHex2Bin.v|
 !i113 1
@@ -31,7 +31,7 @@ Z6 o-work work
 Z7 tCvgOpt 0
 nascii@hex2@bin
 vbaudgen
-Z8 !s110 1559536222
+Z8 !s110 1559558591
 !i10b 1
 !s100 FhhgdY?Y49@cCa=m4chVK3
 IHITgMRI8DRSeYXQ6SzjV12
@@ -45,7 +45,7 @@ R4
 r1
 !s85 0
 31
-Z11 !s108 1559536222.000000
+Z11 !s108 1559558591.000000
 Z12 !s107 C:/Users/Arman/Desktop/Lab4/buart.v|
 Z13 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab4/buart.v|
 !i113 1
@@ -160,7 +160,7 @@ R6
 R7
 ndisp@string
 vemitcrlf_fsm
-Z14 !s110 1559536223
+Z14 !s110 1559558592
 !i10b 1
 !s100 ZJA<b_MUXKF@2gYQc[?`a2
 IfNdjiANS0=VM5:eYAQS@[0
@@ -174,7 +174,7 @@ R4
 r1
 !s85 0
 31
-Z17 !s108 1559536223.000000
+Z17 !s108 1559558592.000000
 Z18 !s107 C:/Users/Arman/Desktop/Lab4/uarttxbuf.v|
 Z19 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab4/uarttxbuf.v|
 !i113 1
@@ -244,13 +244,13 @@ R11
 R6
 R7
 vLab4_140L
-Z20 !s110 1559543584
+Z20 !s110 1559559262
 !i10b 1
 !s100 CDAETSC43Ad7Hh:X5zKaA1
 I[8bJU29Kb<>d5bcmH>T_g0
 R2
 R0
-Z21 w1559543469
+Z21 w1559559254
 Z22 8C:/Users/Arman/Desktop/Lab4/Lab4_140L.v
 Z23 FC:/Users/Arman/Desktop/Lab4/Lab4_140L.v
 L0 1
@@ -258,7 +258,7 @@ R4
 r1
 !s85 0
 31
-Z24 !s108 1559543584.000000
+Z24 !s108 1559559262.000000
 Z25 !s107 C:/Users/Arman/Desktop/Lab4/Lab4_140L.v|
 Z26 !s90 -reportprogress|300|-work|work|C:/Users/Arman/Desktop/Lab4/Lab4_140L.v|
 !i113 1
@@ -287,13 +287,13 @@ Z31 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab4/latticehx1k.v
 R6
 R7
 vlfsr
-R14
+R8
 !i10b 1
-!s100 Vo8@DRkA>0h=CBiWalUIY1
-I<Ag;iIc>l>Q_njHfiO9S_1
+!s100 M9b[0MKEXbVSQ;T@J^iWc2
+IehcQkePDH]Y4KKTdbWL8Y0
 R2
 R0
-Z32 w1559530770
+w1559554177
 8C:/Users/Arman/Desktop/Lab4/lfsr.v
 FC:/Users/Arman/Desktop/Lab4/lfsr.v
 L0 1
@@ -301,7 +301,7 @@ R4
 r1
 !s85 0
 31
-R17
+R11
 !s107 C:/Users/Arman/Desktop/Lab4/lfsr.v|
 !s90 -reportprogress|30|-work|work|C:/Users/Arman/Desktop/Lab4/lfsr.v|
 !i113 1
@@ -417,8 +417,8 @@ R7
 vscctrl
 R20
 !i10b 1
-!s100 9:D:jUFoc4eS_9SWLkd8`0
-I5bA24XBUi3c9iH04mCUkW1
+!s100 ]6Ql:3A32FW6T;kB2]KeY2
+IcaI]0EO<mZc5[29NdSaaD1
 R2
 R0
 R21
@@ -459,11 +459,11 @@ R7
 vtb_sft
 R14
 !i10b 1
-!s100 iGG;R4CTm8KZ8HbYDWf_o1
-I^A_<mk3RTa1PAc;e=4oK50
+!s100 VD9@h1j^i:e?UZZ4lal2c2
+I4AfB<jzL2N_9T2Ke6VHMB2
 R2
 R0
-R32
+w1559553179
 8C:/Users/Arman/Desktop/Lab4/tb_sft.v
 FC:/Users/Arman/Desktop/Lab4/tb_sft.v
 L0 35
