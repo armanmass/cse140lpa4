@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Sun Jun 02 20:39:28 2019
+Sun Jun 02 23:31:26 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -82,12 +82,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Jun 02 20:39:28 2019       ;
+; Analysis & Synthesis Status ; Successful - Sun Jun 02 23:31:26 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab4                                        ;
 ; Top-level Entity Name       ; latticehx1k                                 ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 6,670                                       ;
+; Total logic elements        ; 6,671                                       ;
 ; Total pins                  ; 29                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -206,62 +206,62 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 6670                      ;
-;     -- Combinational with no register       ; 2993                      ;
+; Total logic elements                        ; 6671                      ;
+;     -- Combinational with no register       ; 2989                      ;
 ;     -- Register only                        ; 3584                      ;
-;     -- Combinational with a register        ; 93                        ;
+;     -- Combinational with a register        ; 98                        ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 3001                      ;
-;     -- 3 input functions                    ; 30                        ;
-;     -- 2 input functions                    ; 52                        ;
-;     -- 1 input functions                    ; 3                         ;
+;     -- 4 input functions                    ; 2996                      ;
+;     -- 3 input functions                    ; 26                        ;
+;     -- 2 input functions                    ; 61                        ;
+;     -- 1 input functions                    ; 4                         ;
 ;     -- 0 input functions                    ; 0                         ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 6654                      ;
+;     -- normal mode                          ; 6655                      ;
 ;     -- arithmetic mode                      ; 16                        ;
 ;     -- qfbk mode                            ; 0                         ;
 ;     -- register cascade mode                ; 0                         ;
 ;     -- synchronous clear/load mode          ; 32                        ;
 ;     -- asynchronous clear/load mode         ; 0                         ;
 ;                                             ;                           ;
-; Total registers                             ; 3677                      ;
+; Total registers                             ; 3682                      ;
 ; Total logic cells in carry chains           ; 18                        ;
 ; I/O pins                                    ; 29                        ;
 ; Maximum fan-out node                        ; fake_pll:uut|PLLOUTCORE~0 ;
-; Maximum fan-out                             ; 3678                      ;
-; Total fan-out                               ; 23131                     ;
+; Maximum fan-out                             ; 3683                      ;
+; Total fan-out                               ; 23124                     ;
 ; Average fan-out                             ; 3.45                      ;
 +---------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                      ; Entity Name   ; Library Name ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------+---------------+--------------+
-; |latticehx1k                      ; 6670 (0)    ; 3677         ; 0          ; 29   ; 0            ; 2993 (0)     ; 3584 (0)          ; 93 (0)           ; 18 (0)          ; 0 (0)      ; |latticehx1k                                             ; latticehx1k   ; work         ;
-;    |Lab4_140L:Lab_UT|             ; 71 (0)      ; 25           ; 0          ; 0    ; 0            ; 46 (0)       ; 0 (0)             ; 25 (0)           ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT                            ; Lab4_140L     ; work         ;
-;       |decodeKeysL4:dk|           ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|decodeKeysL4:dk            ; decodeKeysL4  ; work         ;
-;       |scctrl:scctrl|             ; 36 (33)     ; 4            ; 0          ; 0    ; 0            ; 32 (32)      ; 0 (0)             ; 4 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl              ; scctrl        ; work         ;
-;          |regrce:r1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1    ; regrce        ; work         ;
-;          |regrce:r2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2    ; regrce        ; work         ;
-;          |regrce:r3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3    ; regrce        ; work         ;
-;       |scdp:scdp|                 ; 24 (0)      ; 21           ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 21 (0)           ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp                  ; scdp          ; work         ;
-;          |printable:pinst1|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|printable:pinst1 ; printable     ; work         ;
-;          |regrce:lsBitsi|         ; 8 (8)       ; 7            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi   ; regrce        ; work         ;
-;          |regrce:msBitsi|         ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi   ; regrce        ; work         ;
-;          |regrce:u2|              ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u2        ; regrce        ; work         ;
-;    |fake_buart:buart|             ; 24 (24)     ; 19           ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 19 (19)          ; 0 (0)           ; 0 (0)      ; |latticehx1k|fake_buart:buart                            ; fake_buart    ; work         ;
-;    |fake_pll:uut|                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|fake_pll:uut                                ; fake_pll      ; work         ;
-;    |resetGen:resetGen|            ; 9 (8)       ; 6            ; 0          ; 0    ; 0            ; 3 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|resetGen:resetGen                           ; resetGen      ; work         ;
-;       |N_bit_counter:uu0|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|resetGen:resetGen|N_bit_counter:uu0         ; N_bit_counter ; work         ;
-;    |uartTxBuf:ufifo|              ; 6565 (12)   ; 3627         ; 0          ; 0    ; 0            ; 2938 (4)     ; 3584 (0)          ; 43 (8)           ; 18 (0)          ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo                             ; uartTxBuf     ; work         ;
-;       |emitcrlf_fsm:emitcrlf_fsm| ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm   ; emitcrlf_fsm  ; work         ;
-;       |fifo:fifo|                 ; 6540 (6540) ; 3609         ; 0          ; 0    ; 0            ; 2931 (2931)  ; 3584 (3584)       ; 25 (25)          ; 18 (18)         ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|fifo:fifo                   ; fifo          ; work         ;
-;       |tx_fsm:tx_fsm|             ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|tx_fsm:tx_fsm               ; tx_fsm        ; work         ;
-+-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------+---------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                            ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                    ; Entity Name   ; Library Name ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+---------------+--------------+
+; |latticehx1k                      ; 6671 (0)    ; 3682         ; 0          ; 29   ; 0            ; 2989 (0)     ; 3584 (0)          ; 98 (0)           ; 18 (0)          ; 0 (0)      ; |latticehx1k                                           ; latticehx1k   ; work         ;
+;    |Lab4_140L:Lab_UT|             ; 72 (0)      ; 30           ; 0          ; 0    ; 0            ; 42 (0)       ; 0 (0)             ; 30 (0)           ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT                          ; Lab4_140L     ; work         ;
+;       |decodeKeysL4:dk|           ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|decodeKeysL4:dk          ; decodeKeysL4  ; work         ;
+;       |scctrl:scctrl|             ; 40 (36)     ; 9            ; 0          ; 0    ; 0            ; 31 (31)      ; 0 (0)             ; 9 (5)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl            ; scctrl        ; work         ;
+;          |regrce:r1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1  ; regrce        ; work         ;
+;          |regrce:r2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2  ; regrce        ; work         ;
+;          |regrce:r3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3  ; regrce        ; work         ;
+;          |regrce:r4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4  ; regrce        ; work         ;
+;       |scdp:scdp|                 ; 23 (0)      ; 21           ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 21 (0)           ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp                ; scdp          ; work         ;
+;          |regrce:lsBitsi|         ; 8 (8)       ; 7            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi ; regrce        ; work         ;
+;          |regrce:msBitsi|         ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi ; regrce        ; work         ;
+;          |regrce:u2|              ; 9 (9)       ; 8            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u2      ; regrce        ; work         ;
+;    |fake_buart:buart|             ; 24 (24)     ; 19           ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 19 (19)          ; 0 (0)           ; 0 (0)      ; |latticehx1k|fake_buart:buart                          ; fake_buart    ; work         ;
+;    |fake_pll:uut|                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|fake_pll:uut                              ; fake_pll      ; work         ;
+;    |resetGen:resetGen|            ; 9 (8)       ; 6            ; 0          ; 0    ; 0            ; 3 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|resetGen:resetGen                         ; resetGen      ; work         ;
+;       |N_bit_counter:uu0|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|resetGen:resetGen|N_bit_counter:uu0       ; N_bit_counter ; work         ;
+;    |uartTxBuf:ufifo|              ; 6565 (12)   ; 3627         ; 0          ; 0    ; 0            ; 2938 (4)     ; 3584 (0)          ; 43 (8)           ; 18 (0)          ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo                           ; uartTxBuf     ; work         ;
+;       |emitcrlf_fsm:emitcrlf_fsm| ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm ; emitcrlf_fsm  ; work         ;
+;       |fifo:fifo|                 ; 6540 (6540) ; 3609         ; 0          ; 0    ; 0            ; 2931 (2931)  ; 3584 (3584)       ; 25 (25)          ; 18 (18)         ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|fifo:fifo                 ; fifo          ; work         ;
+;       |tx_fsm:tx_fsm|             ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|tx_fsm:tx_fsm             ; tx_fsm        ; work         ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -293,19 +293,18 @@ Encoding Type:  One-Hot
 +------------------+------------------+---------------+-----------------+----------------+------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                                    ;
-+----------------------------------------------------+------------------------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal                      ; Free of Timing Hazards ;
-+----------------------------------------------------+------------------------------------------+------------------------+
-; Lab4_140L:Lab_UT|scctrl:scctrl|state[0]            ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux1      ; yes                    ;
-; Lab4_140L:Lab_UT|scctrl:scctrl|state[1]            ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux1      ; yes                    ;
-; Lab4_140L:Lab_UT|scctrl:scctrl|state[2]            ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux1      ; yes                    ;
-; Lab4_140L:Lab_UT|scctrl:scctrl|state[3]            ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux1      ; yes                    ;
-; Lab4_140L:Lab_UT|scctrl:scctrl|inE                 ; Lab4_140L:Lab_UT|scctrl:scctrl|Selector0 ; yes                    ;
-; Lab4_140L:Lab_UT|scctrl:scctrl|count[0]            ; Lab4_140L:Lab_UT|scctrl:scctrl|Selector4 ; yes                    ;
-; Number of user-specified and inferred latches = 6  ;                                          ;                        ;
-+----------------------------------------------------+------------------------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                ;
++----------------------------------------------------+--------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                  ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------------+------------------------+
+; Lab4_140L:Lab_UT|scctrl:scctrl|next_state[0]       ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux4  ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|next_state[1]       ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux4  ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|next_state[2]       ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux4  ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|next_state[3]       ; Lab4_140L:Lab_UT|scctrl:scctrl|Mux4  ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|ldBit               ; Lab4_140L:Lab_UT|scctrl:scctrl|ldBit ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                                      ;                        ;
++----------------------------------------------------+--------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -356,12 +355,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3677  ;
+; Total registers                              ; 3682  ;
 ; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3624  ;
+; Number of registers using Clock Enable       ; 3625  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -371,14 +370,14 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |latticehx1k|uartTxBuf:ufifo|fifo:fifo|rdaddr[5]            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|resetGen:resetGen|reset_count[3]               ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |latticehx1k|uartTxBuf:ufifo|txdataD[4]                     ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u2|q[7]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi|q[0] ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; Yes        ; |latticehx1k|fake_buart:buart|fa_data[6]                    ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|Selector0       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |latticehx1k|uartTxBuf:ufifo|fifo:fifo|rdaddr[8]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|resetGen:resetGen|reset_count[0]               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |latticehx1k|uartTxBuf:ufifo|txdataD[0]                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi|q[6] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u2|q[6]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[1] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi|q[1] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 21 LEs               ; 0 LEs                  ; Yes        ; |latticehx1k|fake_buart:buart|fa_data[5]                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -560,6 +559,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; load6          ; 9     ; Signed Integer                                     ;
 ; load7          ; 10    ; Signed Integer                                     ;
 ; load8          ; 11    ; Signed Integer                                     ;
+; load9          ; 12    ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -604,14 +604,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4"                                           ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; ce   ; Input  ; Info     ; Stuck at VCC                                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                               ;
++------+-------+----------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -730,7 +729,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 02 20:39:16 2019
+    Info: Processing started: Sun Jun 02 23:31:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -805,106 +804,75 @@ Info (12128): Elaborating entity "lfsr" for hierarchy "Lab4_140L:Lab_UT|scdp:scd
 Info (12128): Elaborating entity "decodeKeysL4" for hierarchy "Lab4_140L:Lab_UT|decodeKeysL4:dk" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 68
 Warning (10036): Verilog HDL or VHDL warning at decodeKeysL4.v(59): object "is_b7_1" assigned a value but never read File: C:/Users/Arman/Desktop/Lab4/decodeKeysL4.v Line: 59
 Info (12128): Elaborating entity "scctrl" for hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 100
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(319): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 319
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(324): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 324
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(326): variable "de_bigE" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(327): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 327
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(331): variable "de_bigD" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 331
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(304): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 304
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(323): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 323
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(325): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 325
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(327): variable "de_bigE" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 327
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(328): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 328
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(329): variable "de_bigD" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 329
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(330): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 330
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(331): variable "de_bigL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 331
 Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(332): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 332
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(333): variable "de_bigL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 333
 Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(334): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 334
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(336): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 336
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(339): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 339
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(337): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 337
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(338): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 338
 Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(340): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 340
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(341): variable "sccEldByte" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 341
 Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(344): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 344
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(345): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 345
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(347): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 347
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(352): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 352
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(353): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 353
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(355): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 355
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(358): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 358
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(359): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 359
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(361): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 361
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(364): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 364
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(365): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 365
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(367): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 367
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(370): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 370
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(371): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 371
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(373): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 373
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(376): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 376
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(377): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 377
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(379): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 379
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(382): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 382
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(383): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 383
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(385): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 385
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(388): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 388
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(389): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 389
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(391): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 391
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(394): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 394
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(395): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 395
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(397): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 397
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(400): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 400
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(401): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 401
-Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(403): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 403
-Warning (10270): Verilog HDL Case Statement warning at Lab4_140L.v(324): incomplete case statement has no default case item File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 324
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(317): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(317): inferring latch(es) for variable "count", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(317): inferring latch(es) for variable "inE", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(349): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 349
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(350): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 350
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(352): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 352
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(355): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 355
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(356): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 356
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(358): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 358
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(361): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 361
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(362): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 362
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(364): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 364
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(367): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 367
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(368): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 368
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(370): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 370
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(373): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 373
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(374): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 374
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(376): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 376
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(379): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 379
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(380): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 380
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(382): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 382
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(385): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 385
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(386): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 386
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(388): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 388
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(391): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 391
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(392): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 392
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(394): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 394
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(397): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 397
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(398): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 398
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(400): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 400
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(403): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 403
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(404): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 404
+Warning (10230): Verilog HDL assignment warning at Lab4_140L.v(406): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 406
+Warning (10270): Verilog HDL Case Statement warning at Lab4_140L.v(325): incomplete case statement has no default case item File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 325
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(321): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(321): inferring latch(es) for variable "ldBit", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
 Warning (10034): Output port "sccLdKey" at Lab4_140L.v(259) has no driver File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 259
 Warning (10034): Output port "sccDecrypt" at Lab4_140L.v(256) has no driver File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 256
 Warning (10034): Output port "sccDnibble1En" at Lab4_140L.v(257) has no driver File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 257
 Warning (10034): Output port "sccDnibble2En" at Lab4_140L.v(258) has no driver File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 258
 Warning (10034): Output port "sccLdLFSR" at Lab4_140L.v(260) has no driver File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 260
-Info (10041): Inferred latch for "inE" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[0]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[1]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[2]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[3]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[4]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[5]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[6]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[7]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[8]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[9]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[10]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[11]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[12]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[13]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[14]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[15]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[16]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[17]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[18]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[19]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[20]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[21]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[22]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[23]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[24]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[25]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[26]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[27]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[28]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[29]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[30]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "count[31]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "state[0]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "state[1]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "state[2]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (10041): Inferred latch for "state[3]" at Lab4_140L.v(317) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 409
-Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|state[0] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[3] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|state[1] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[2] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|state[2] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[3] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|state[3] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[2] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|inE has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 315
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|decodeKeysL4:dk|de_cr File: C:/Users/Arman/Desktop/Lab4/decodeKeysL4.v Line: 45
-Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|count[0] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[0] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 317
+Info (10041): Inferred latch for "ldBit" at Lab4_140L.v(321) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+Info (10041): Inferred latch for "next_state[0]" at Lab4_140L.v(321) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+Info (10041): Inferred latch for "next_state[1]" at Lab4_140L.v(321) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+Info (10041): Inferred latch for "next_state[2]" at Lab4_140L.v(321) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+Info (10041): Inferred latch for "next_state[3]" at Lab4_140L.v(321) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 413
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|next_state[0] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[3] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 301
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|next_state[1] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[1] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 301
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|next_state[2] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[1] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 301
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|next_state[3] has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state[3] File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 301
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|ldBit has unsafe behavior File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 321
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal fake_buart:buart|rx_data[7] File: C:/Users/Arman/Desktop/Lab4/fake_buart.v Line: 53
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sd" is stuck at GND File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 98
     Warning (13410): Pin "to_ir" is stuck at GND File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 102
@@ -914,16 +882,16 @@ Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk_in" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 100
     Warning (15610): No output dependent on input pin "from_pc" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 101
-Info (21057): Implemented 6699 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6700 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 6670 logic cells
+    Info (21061): Implemented 6671 logic cells
 Info (144001): Generated suppressed messages file C:/Users/Arman/Desktop/Lab4/output_files/Lab4.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
-    Info: Peak virtual memory: 582 megabytes
-    Info: Processing ended: Sun Jun 02 20:39:28 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:26
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 585 megabytes
+    Info: Processing ended: Sun Jun 02 23:31:26 2019
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+

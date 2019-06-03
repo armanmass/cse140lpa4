@@ -282,12 +282,12 @@ module scctrl (
 		 );
 
 
-reg [3:0] state;
+reg [3:0] state, next_state;
 //idle start
 //encrypt read encrypt input
 //decrypt encrypt and output
 parameter idle = 0, encrypt = 1, decrypt = 2, load = 3, load1 = 4, load2 = 5, 
-		  load3 = 6, load4 = 7, load5 = 8, load6 = 9, load7 = 10, load8 = 11;
+		  load3 = 6, load4 = 7, load5 = 8, load6 = 9, load7 = 10, load8 = 11, load9 = 12;
 
 assign sccEncrypt = (state == encrypt);
 assign sccEldByte = (sccEncrypt & scdCharIsValid & bu_rx_data_rdy);
@@ -298,10 +298,14 @@ reg EmsBitsSl;
 assign sccEmsBitsSl = EmsBitsSl; 
 
 always @(posedge clk) begin
-	if(rst)
+	if(rst) begin
 		EmsBitsSl <= 1'b1;
-	else
+		state <= idle;
+	end
+	else begin
 		EmsBitsSl <= ~EmsBitsSl;
+		state <= next_state;
+	end
 end
 
 
@@ -312,103 +316,98 @@ assign L4_led[3] = 1'b0;
 assign L4_led[4] = (state == idle);
 
 assign L4_PrintBuf = de_cr; 
-reg inE;
-integer count;
+
 always @(bu_rx_data_rdy or rst) begin
-	if(rst) begin
-		state <= idle;
-		count <= 0;
-		inE <= 1'b0;
-	end
+	if(rst)
+		next_state <= idle;
 	else begin
 		case(state)
 			idle:begin
-				if(de_bigE)begin
-					state <= encrypt;
-					inE <= 1'b0;
-					count <= 0;
-				end
+				if(de_bigE)
+					next_state <= encrypt;
 				else if(de_bigD)
-					state <= decrypt;
+					next_state <= decrypt;
 				else if(de_bigL)
-					state <= load;
+					next_state <= load;
 				else
-					state <= idle;
+					next_state <= idle;
 			end
 			encrypt:begin
-				if(de_cr) begin
-					state <= idle;
-					inE <= 1'b0;
-				end
-				else begin
-					state <= encrypt;
-					if(count == 1)
-						inE <= 1'b1;
-					if(count == 0)
-						count <= 1;					
-				end
+				if(de_cr)
+					next_state <= idle;
+				else
+					next_state <= encrypt;
 			end
 			decrypt:begin
 				if(de_cr)
-					state <= idle;
+					next_state <= idle;
 				else
-					state <= decrypt;
+					next_state <= decrypt;
 			end
 			load:begin
 				if(de_hex)
-					state <= load2;
+					next_state <= load2;
 				else
-					state <= load;
+					next_state <= load;
 			end
 			load2:begin
 				if(de_hex)
-					state <= load3;
+					next_state <= load3;
 				else
-					state <= load2;
+					next_state <= load2;
 			end
 			load3:begin
 				if(de_hex)
-					state <= load4;
+					next_state <= load4;
 				else
-					state <= load3;
+					next_state <= load3;
 			end
 			load4:begin
 				if(de_hex)
-					state <= load5;
+					next_state <= load5;
 				else
-					state <= load4;
+					next_state <= load4;
 			end
 			load5:begin
 				if(de_hex)
-					state <= load6;
+					next_state <= load6;
 				else
-					state <= load5;
+					next_state <= load5;
 			end
 			load6:begin
 				if(de_hex)
-					state <= load7;
+					next_state <= load7;
 				else
-					state <= load6;
+					next_state <= load6;
 			end
 			load7:begin
 				if(de_hex)
-					state <= load8;
+					next_state <= load8;
 				else
-					state <= load7;
+					next_state <= load7;
 			end
 			load8:begin
-				if(de_cr)
-					state <= idle;
+				if(de_hex)
+					next_state <= load9;
 				else
-					state <= load8;
+					next_state <= load8;
+			end
+			load9:begin
+				if(de_cr)
+					next_state <= idle;
+				else
+					next_state <= load9;
 			end
 		endcase
 	end
 end
+
 wire delay1, delay2, delay3, delay4;
 regrce r1 (.q(delay1), .d(sccEldByte), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r2 (.q(delay2), .d(delay1), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r3 (.q(delay3), .d(delay2), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
-assign L4_tx_data_rdy = ((delay3 || delay4) & inE);
+
+assign L4_tx_data_rdy = (delay3 || delay4);
+
 endmodule // scctrl

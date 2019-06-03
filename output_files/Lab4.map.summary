@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Sun Jun 02 20:39:28 2019
+Analysis & Synthesis Status : Successful - Sun Jun 02 23:31:26 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Lab4
 Top-level Entity Name : latticehx1k
 Family : MAX V
-Total logic elements : 6,670
+Total logic elements : 6,671
 Total pins : 29
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
