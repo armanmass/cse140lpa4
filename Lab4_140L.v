@@ -311,8 +311,6 @@ assign L4_led[2] = (state == load);
 assign L4_led[3] = 1'b0;
 assign L4_led[4] = (state == idle);
 
-assign 
-
 assign L4_PrintBuf = de_cr; 
 
 
