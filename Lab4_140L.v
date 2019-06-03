@@ -399,6 +399,6 @@ wire delay1, delay2, delay3, delay4;
 regrce r1 (.q(delay1), .d(sccEldByte), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r2 (.q(delay2), .d(delay1), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r3 (.q(delay3), .d(delay2), .ce(1'b1), .rst(rst), .clk(clk));
-//regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
-assign L4_tx_data_rdy = delay2 || delay3;
+regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
+assign L4_tx_data_rdy = (delay2 || delay3) & encrypt;
 endmodule // scctrl

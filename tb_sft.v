@@ -202,14 +202,14 @@ module tb_sft(
       //
       waitN(100);
       sendByte("L");
-      sendByte("1");
-      sendByte("2");
-      sendByte("3");
-      sendByte("4");
-      sendByte("5");
-      sendByte("6");
-      sendByte("7");
-      sendByte("8");
+      sendByte("0");
+      sendByte("0");
+      sendByte("0");
+      sendByte("0");
+      sendByte("0");
+      sendByte("0");
+      sendByte("0");
+      sendByte("0");
       sendByte(8'h0d);
       waitN(3);
       sendByte("E");
