@@ -244,6 +244,11 @@ module scdp (
 endmodule // scdp
 
 
+/*
+ * Author: Arman Massoudian
+ * A15684193
+ * github: armanmass
+ */
 //
 // scctrl - stream cipher control
 //
@@ -259,7 +264,6 @@ module scctrl (
 		 output reg [7:0] sccLdKey,
 		 output sccLdLFSR,
 		
-		 //output [7:0] L4_tx_data,
 		 output L4_tx_data_rdy,
 		 input [7:0] bu_rx_data,
 		 input bu_rx_data_rdy,
@@ -281,27 +285,29 @@ module scctrl (
 		 input clk    
 		 );
 
-
+//moore machine and outputs
 reg [3:0] state, next_state;
 reg EmsBitsSl, EmsLoaded, LdLFSR, nibbleIn1, nibbleIn2;
 
+//FSM states
 parameter [3:0] idle = 4'b0000, encrypt = 4'b0001, decrypt = 4'b0010, load = 4'b0011, load1 = 4'b0100, load2 = 4'b0101, 
 		  load3 = 4'b0110, load4 = 4'b0111, load5 = 4'b1000, load6 = 4'b1001, load7 = 4'b1010, load8 = 4'b1011, load9 = 4'b1100, decrypt2 = 4'b1101;
 
-
+//encrypt signals to be sent to datapath
 assign sccEncrypt = (state == encrypt);
 assign sccEldByte = (sccEncrypt & scdCharIsValid & bu_rx_data_rdy);
 assign sccEmsBitsLd = sccEncrypt & EmsLoaded;
 assign sccElsBitsLd = sccEncrypt & EmsLoaded;
 assign sccEmsBitsSl = EmsBitsSl;
 
+//decrypt signals to be sent to datapath
 assign sccDecrypt = ((state == decrypt) || (state == decrypt2));
 assign sccDnibble1En = nibbleIn1 & sccDecrypt;
 assign sccDnibble2En = nibbleIn2 & sccDecrypt;
 
 assign sccLdLFSR = LdLFSR;
 
-
+//selector toggle and FSM update
 always @(posedge clk) begin
 	if(rst) begin
 		EmsBitsSl <= 1'b0;
@@ -313,7 +319,7 @@ always @(posedge clk) begin
 	end
 end
 
-
+//LED according to state
 assign L4_led[0] = sccEncrypt;
 assign L4_led[1] = sccDecrypt;
 assign L4_led[2] = ((state == load) || (state == load2) || (state == load3) || (state == load4) || 
@@ -321,8 +327,10 @@ assign L4_led[2] = ((state == load) || (state == load2) || (state == load3) || (
 assign L4_led[3] = 1'b0;
 assign L4_led[4] = (state == idle);
 
+//clear fifo and echo
 assign L4_PrintBuf = de_cr; 
 
+//moore FSM 3 main states encrypt decrypt and load
 always @(bu_rx_data_rdy or rst) begin
 	if(rst) begin
 		next_state <= idle;
@@ -452,14 +460,17 @@ always @(bu_rx_data_rdy or rst) begin
 	end
 end
 
+//delay loading encrypt byte
 wire delay1, delay2, delay3, delay4, delayload;
 regrce r1 (.q(delay1), .d(sccEldByte), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r2 (.q(delay2), .d(delay1), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r3 (.q(delay3), .d(delay2), .ce(1'b1), .rst(rst), .clk(clk));
 regrce r4 (.q(delay4), .d(delay3), .ce(1'b1), .rst(rst), .clk(clk));
 
+//delay loading second decrypt nibble
 regrce r5 (.q(delayload), .d(sccDnibble2En), .ce(1'b1), .rst(rst), .clk(clk));
 
+//data ready to fifo
 assign L4_tx_data_rdy = (delay3 || delay4) || delayload;
 
 endmodule // scctrl

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Mon Jun 03 04:42:04 2019
+Mon Jun 03 23:09:24 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,8 +11,55 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Messages
-  7. Analysis & Synthesis Suppressed Messages
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|state
+  9. State Machine - |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm|cstate
+ 10. State Machine - |latticehx1k|uartTxBuf:ufifo|tx_fsm:tx_fsm|cstate
+ 11. User-Specified and Inferred Latches
+ 12. Logic Cells Representing Combinational Loops
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: resetGen:resetGen|N_bit_counter:uu0
+ 18. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:u0
+ 19. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:u1
+ 20. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:u2
+ 21. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi
+ 22. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi
+ 23. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:rxdataD
+ 24. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV
+ 25. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k0l
+ 26. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k0h
+ 27. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k1l
+ 28. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k1h
+ 29. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k2l
+ 30. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k2h
+ 31. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k3l
+ 32. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k3h
+ 33. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl
+ 34. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1
+ 35. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2
+ 36. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3
+ 37. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4
+ 38. Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r5
+ 39. Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r5"
+ 40. Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4"
+ 41. Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3"
+ 42. Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2"
+ 43. Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1"
+ 44. Port Connectivity Checks: "Lab4_140L:Lab_UT|decodeKeysL4:dk"
+ 45. Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|lfsr:lfsrInst"
+ 46. Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV"
+ 47. Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|regrce:rxdataD"
+ 48. Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|printable:pinst1"
+ 49. Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|printable:pinst0"
+ 50. Port Connectivity Checks: "resetGen:resetGen|N_bit_counter:uu0"
+ 51. Port Connectivity Checks: "fake_buart:buart"
+ 52. Port Connectivity Checks: "fake_pll:uut"
+ 53. Analysis & Synthesis Messages
+ 54. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -38,11 +85,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Jun 03 04:42:04 2019           ;
+; Analysis & Synthesis Status ; Successful - Mon Jun 03 23:09:24 2019       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Lab4                                        ;
 ; Top-level Entity Name       ; latticehx1k                                 ;
 ; Family                      ; MAX V                                       ;
+; Total logic elements        ; 6,820                                       ;
+; Total pins                  ; 29                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
@@ -133,23 +184,626 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
-; uarttxbuf.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/uarttxbuf.v    ;         ;
-; regrce.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/regrce.v       ;         ;
-; printable.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/printable.v    ;         ;
-; lfsr.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/lfsr.v         ;         ;
-; latticehx1k.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/latticehx1k.v  ;         ;
-; Lab4_140L.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/Lab4_140L.v    ;         ;
-; fake_fifo.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/fake_fifo.v    ;         ;
-; decodeKeysL4.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/decodeKeysL4.v ;         ;
-; buart.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/buart.v        ;         ;
-; bin2AsciiHex.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/bin2AsciiHex.v ;         ;
-; asciiHex2Bin.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/Lab4/asciiHex2Bin.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; uarttxbuf.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/uarttxbuf.v    ;         ;
+; regrce.v                         ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/regrce.v       ;         ;
+; printable.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/printable.v    ;         ;
+; lfsr.v                           ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/lfsr.v         ;         ;
+; latticehx1k.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/latticehx1k.v  ;         ;
+; Lab4_140L.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/Lab4_140L.v    ;         ;
+; fake_pll.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/fake_pll.v     ;         ;
+; fake_fifo.v                      ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/fake_fifo.v    ;         ;
+; fake_buart.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/fake_buart.v   ;         ;
+; decodeKeysL4.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/decodeKeysL4.v ;         ;
+; bin2AsciiHex.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/bin2AsciiHex.v ;         ;
+; asciiHex2Bin.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Arman/Desktop/testing/asciiHex2Bin.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                             ;
++---------------------------------------------+---------------------------+
+; Resource                                    ; Usage                     ;
++---------------------------------------------+---------------------------+
+; Total logic elements                        ; 6820                      ;
+;     -- Combinational with no register       ; 3053                      ;
+;     -- Register only                        ; 3658                      ;
+;     -- Combinational with a register        ; 109                       ;
+;                                             ;                           ;
+; Logic element usage by number of LUT inputs ;                           ;
+;     -- 4 input functions                    ; 3021                      ;
+;     -- 3 input functions                    ; 58                        ;
+;     -- 2 input functions                    ; 80                        ;
+;     -- 1 input functions                    ; 3                         ;
+;     -- 0 input functions                    ; 0                         ;
+;                                             ;                           ;
+; Logic elements by mode                      ;                           ;
+;     -- normal mode                          ; 6804                      ;
+;     -- arithmetic mode                      ; 16                        ;
+;     -- qfbk mode                            ; 0                         ;
+;     -- register cascade mode                ; 0                         ;
+;     -- synchronous clear/load mode          ; 43                        ;
+;     -- asynchronous clear/load mode         ; 31                        ;
+;                                             ;                           ;
+; Total registers                             ; 3767                      ;
+; Total logic cells in carry chains           ; 18                        ;
+; I/O pins                                    ; 29                        ;
+; Maximum fan-out node                        ; fake_pll:uut|PLLOUTCORE~0 ;
+; Maximum fan-out                             ; 3768                      ;
+; Total fan-out                               ; 23641                     ;
+; Average fan-out                             ; 3.45                      ;
++---------------------------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                               ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node        ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                       ; Entity Name   ; Library Name ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+---------------+--------------+
+; |latticehx1k                      ; 6820 (0)    ; 3767         ; 0          ; 29   ; 0            ; 3053 (0)     ; 3658 (0)          ; 109 (0)          ; 18 (0)          ; 0 (0)      ; |latticehx1k                                              ; latticehx1k   ; work         ;
+;    |Lab4_140L:Lab_UT|             ; 222 (0)     ; 115          ; 0          ; 0    ; 0            ; 107 (0)      ; 74 (0)            ; 41 (0)           ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT                             ; Lab4_140L     ; work         ;
+;       |decodeKeysL4:dk|           ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|decodeKeysL4:dk             ; decodeKeysL4  ; work         ;
+;       |scctrl:scctrl|             ; 54 (48)     ; 19           ; 0          ; 0    ; 0            ; 35 (34)      ; 0 (0)             ; 19 (14)          ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl               ; scctrl        ; work         ;
+;          |regrce:r1|              ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1     ; regrce        ; work         ;
+;          |regrce:r2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2     ; regrce        ; work         ;
+;          |regrce:r3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3     ; regrce        ; work         ;
+;          |regrce:r4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4     ; regrce        ; work         ;
+;          |regrce:r5|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r5     ; regrce        ; work         ;
+;       |scdp:scdp|                 ; 159 (17)    ; 96           ; 0          ; 0    ; 0            ; 63 (17)      ; 74 (0)            ; 22 (0)           ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp                   ; scdp          ; work         ;
+;          |asciiHex2Bin:a2b|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|asciiHex2Bin:a2b  ; asciiHex2Bin  ; work         ;
+;          |bin2AsciiHex:b2a0|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|bin2AsciiHex:b2a0 ; bin2AsciiHex  ; work         ;
+;          |bin2AsciiHex:b2a1|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|bin2AsciiHex:b2a1 ; bin2AsciiHex  ; work         ;
+;          |lfsr:lfsrInst|          ; 40 (40)     ; 31           ; 0          ; 0    ; 0            ; 9 (9)        ; 31 (31)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|lfsr:lfsrInst     ; lfsr          ; work         ;
+;          |printable:pinst0|       ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|printable:pinst0  ; printable     ; work         ;
+;          |printable:pinst1|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|printable:pinst1  ; printable     ; work         ;
+;          |regrce:k0h|             ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k0h        ; regrce        ; work         ;
+;          |regrce:k0l|             ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k0l        ; regrce        ; work         ;
+;          |regrce:k1h|             ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k1h        ; regrce        ; work         ;
+;          |regrce:k1l|             ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k1l        ; regrce        ; work         ;
+;          |regrce:k2h|             ; 6 (6)       ; 4            ; 0          ; 0    ; 0            ; 2 (2)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k2h        ; regrce        ; work         ;
+;          |regrce:k2l|             ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k2l        ; regrce        ; work         ;
+;          |regrce:k3h|             ; 6 (6)       ; 3            ; 0          ; 0    ; 0            ; 3 (3)        ; 3 (3)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k3h        ; regrce        ; work         ;
+;          |regrce:k3l|             ; 6 (6)       ; 4            ; 0          ; 0    ; 0            ; 2 (2)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k3l        ; regrce        ; work         ;
+;          |regrce:lsBitsi|         ; 8 (8)       ; 7            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi    ; regrce        ; work         ;
+;          |regrce:msBitsi|         ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi    ; regrce        ; work         ;
+;          |regrce:rddataDV|        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV   ; regrce        ; work         ;
+;          |regrce:rxdataD|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:rxdataD    ; regrce        ; work         ;
+;          |regrce:u0|              ; 11 (11)     ; 4            ; 0          ; 0    ; 0            ; 7 (7)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u0         ; regrce        ; work         ;
+;          |regrce:u1|              ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 4 (4)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u1         ; regrce        ; work         ;
+;          |regrce:u2|              ; 9 (9)       ; 8            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u2         ; regrce        ; work         ;
+;    |fake_buart:buart|             ; 24 (24)     ; 19           ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 19 (19)          ; 0 (0)           ; 0 (0)      ; |latticehx1k|fake_buart:buart                             ; fake_buart    ; work         ;
+;    |fake_pll:uut|                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|fake_pll:uut                                 ; fake_pll      ; work         ;
+;    |resetGen:resetGen|            ; 9 (8)       ; 6            ; 0          ; 0    ; 0            ; 3 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|resetGen:resetGen                            ; resetGen      ; work         ;
+;       |N_bit_counter:uu0|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|resetGen:resetGen|N_bit_counter:uu0          ; N_bit_counter ; work         ;
+;    |uartTxBuf:ufifo|              ; 6564 (11)   ; 3627         ; 0          ; 0    ; 0            ; 2937 (3)     ; 3584 (0)          ; 43 (8)           ; 18 (0)          ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo                              ; uartTxBuf     ; work         ;
+;       |emitcrlf_fsm:emitcrlf_fsm| ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm    ; emitcrlf_fsm  ; work         ;
+;       |fifo:fifo|                 ; 6540 (6540) ; 3609         ; 0          ; 0    ; 0            ; 2931 (2931)  ; 3584 (3584)       ; 25 (25)          ; 18 (18)         ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|fifo:fifo                    ; fifo          ; work         ;
+;       |tx_fsm:tx_fsm|             ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |latticehx1k|uartTxBuf:ufifo|tx_fsm:tx_fsm                ; tx_fsm        ; work         ;
++-----------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|state                                                                                                                                         ;
++----------------+----------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+---------------+---------------+------------+
+; Name           ; state.decrypt2 ; state.load9 ; state.load8 ; state.load7 ; state.load6 ; state.load5 ; state.load4 ; state.load3 ; state.load2 ; state.load ; state.decrypt ; state.encrypt ; state.idle ;
++----------------+----------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+---------------+---------------+------------+
+; state.idle     ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 0          ;
+; state.encrypt  ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 1             ; 1          ;
+; state.decrypt  ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 1             ; 0             ; 1          ;
+; state.load     ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ; 0             ; 0             ; 1          ;
+; state.load2    ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0          ; 0             ; 0             ; 1          ;
+; state.load3    ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.load4    ; 0              ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.load5    ; 0              ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.load6    ; 0              ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.load7    ; 0              ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.load8    ; 0              ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.load9    ; 0              ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
+; state.decrypt2 ; 1              ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0             ; 0             ; 1          ;
++----------------+----------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+---------------+---------------+------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------+
+; State Machine - |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm|cstate   ;
++-----------------+---------------+-----------------+---------------+-------------+
+; Name            ; cstate.EMITLF ; cstate.WTEMITCR ; cstate.EMITCR ; cstate.IDLE ;
++-----------------+---------------+-----------------+---------------+-------------+
+; cstate.IDLE     ; 0             ; 0               ; 0             ; 0           ;
+; cstate.EMITCR   ; 0             ; 0               ; 1             ; 1           ;
+; cstate.WTEMITCR ; 0             ; 1               ; 0             ; 1           ;
+; cstate.EMITLF   ; 1             ; 0               ; 0             ; 1           ;
++-----------------+---------------+-----------------+---------------+-------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |latticehx1k|uartTxBuf:ufifo|tx_fsm:tx_fsm|cstate                                                       ;
++------------------+------------------+---------------+-----------------+----------------+------------------+-------------+
+; Name             ; cstate.EMITCRLF1 ; cstate.WAITTX ; cstate.STROBETX ; cstate.STARTTX ; cstate.EMITCRLF0 ; cstate.IDLE ;
++------------------+------------------+---------------+-----------------+----------------+------------------+-------------+
+; cstate.IDLE      ; 0                ; 0             ; 0               ; 0              ; 0                ; 0           ;
+; cstate.EMITCRLF0 ; 0                ; 0             ; 0               ; 0              ; 1                ; 1           ;
+; cstate.STARTTX   ; 0                ; 0             ; 0               ; 1              ; 0                ; 1           ;
+; cstate.STROBETX  ; 0                ; 0             ; 1               ; 0              ; 0                ; 1           ;
+; cstate.WAITTX    ; 0                ; 1             ; 0               ; 0              ; 0                ; 1           ;
+; cstate.EMITCRLF1 ; 1                ; 0             ; 0               ; 0              ; 0                ; 1           ;
++------------------+------------------+---------------+-----------------+----------------+------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                       ;
++-----------------------------------------------------+--------------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                        ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------------------+------------------------+
+; Lab4_140L:Lab_UT|scctrl:scctrl|EmsLoaded            ; Lab4_140L:Lab_UT|scctrl:scctrl|EmsLoaded   ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|nibbleIn2            ; Lab4_140L:Lab_UT|scctrl:scctrl|Selector1   ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|LdLFSR               ; Lab4_140L:Lab_UT|scctrl:scctrl|Selector27  ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|nibbleIn1            ; Lab4_140L:Lab_UT|scctrl:scctrl|Selector23  ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[6]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[4]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[2]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[0]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[5]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[3]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[1]          ; Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] ; yes                    ;
+; Number of user-specified and inferred latches = 12  ;                                            ;                        ;
++-----------------------------------------------------+--------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; fake_pll:uut|PLLOUTCORE                                ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                              ;
++----------------------------------------------------+------------------------------------------------------------+
+; Register name                                      ; Reason for Removal                                         ;
++----------------------------------------------------+------------------------------------------------------------+
+; Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi|q[5]     ; Merged with Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[5] ;
+; Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi|q[7]     ; Merged with Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[7] ;
+; Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[7]     ; Stuck at GND due to stuck port data_in                     ;
+; uartTxBuf:ufifo|txdataD[7]                         ; Stuck at GND due to stuck port reg_out                     ;
+; uartTxBuf:ufifo|fifo:fifo|rdata[7]                 ; Stuck at GND due to stuck port data_in                     ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|state~2             ; Lost fanout                                                ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|state~3             ; Lost fanout                                                ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|state~4             ; Lost fanout                                                ;
+; Lab4_140L:Lab_UT|scctrl:scctrl|state~5             ; Lost fanout                                                ;
+; uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm|cstate~2 ; Lost fanout                                                ;
+; uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm|cstate~3 ; Lost fanout                                                ;
+; uartTxBuf:ufifo|tx_fsm:tx_fsm|cstate~2             ; Lost fanout                                                ;
+; uartTxBuf:ufifo|tx_fsm:tx_fsm|cstate~3             ; Lost fanout                                                ;
+; uartTxBuf:ufifo|tx_fsm:tx_fsm|cstate~4             ; Lost fanout                                                ;
+; Total Number of Removed Registers = 14             ;                                                            ;
++----------------------------------------------------+------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; Register name                                  ; Reason for Removal        ; Registers Removed due to This Register                         ;
++------------------------------------------------+---------------------------+----------------------------------------------------------------+
+; Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[7] ; Stuck at GND              ; uartTxBuf:ufifo|txdataD[7], uartTxBuf:ufifo|fifo:fifo|rdata[7] ;
+;                                                ; due to stuck port data_in ;                                                                ;
++------------------------------------------------+---------------------------+----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3767  ;
+; Number of registers using Synchronous Clear  ; 35    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3701  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |latticehx1k|uartTxBuf:ufifo|fifo:fifo|rdaddr[5]                    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|resetGen:resetGen|reset_count[3]                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u1|q[2]              ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u2|q[0]              ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|lfsr:lfsrInst|prng_lfsr[28] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:u0|q[1]              ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi|q[0]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k3l|q[1]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k2l|q[1]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k1l|q[0]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k0l|q[1]             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k3h|q[0]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k2h|q[3]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k1h|q[3]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |latticehx1k|Lab4_140L:Lab_UT|scdp:scdp|regrce:k0h|q[2]             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |latticehx1k|uartTxBuf:ufifo|txdataD[6]                             ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |latticehx1k|fake_buart:buart|fa_data[4]                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|state                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: resetGen:resetGen|N_bit_counter:uu0 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; N              ; 5     ; Signed Integer                                          ;
+; N_1            ; 4     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:u0 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:u1 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:u2 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:msBitsi ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:lsBitsi ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:rxdataD ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k0l ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k0h ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k1l ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k1h ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k2l ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k2h ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k3l ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scdp:scdp|regrce:k3h ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; idle           ; 0000  ; Unsigned Binary                                    ;
+; encrypt        ; 0001  ; Unsigned Binary                                    ;
+; decrypt        ; 0010  ; Unsigned Binary                                    ;
+; load           ; 0011  ; Unsigned Binary                                    ;
+; load1          ; 0100  ; Unsigned Binary                                    ;
+; load2          ; 0101  ; Unsigned Binary                                    ;
+; load3          ; 0110  ; Unsigned Binary                                    ;
+; load4          ; 0111  ; Unsigned Binary                                    ;
+; load5          ; 1000  ; Unsigned Binary                                    ;
+; load6          ; 1001  ; Unsigned Binary                                    ;
+; load7          ; 1010  ; Unsigned Binary                                    ;
+; load8          ; 1011  ; Unsigned Binary                                    ;
+; load9          ; 1100  ; Unsigned Binary                                    ;
+; decrypt2       ; 1101  ; Unsigned Binary                                    ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r5 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r5" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                               ;
++------+-------+----------+--------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r4" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                               ;
++------+-------+----------+--------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r3" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                               ;
++------+-------+----------+--------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r2" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                               ;
++------+-------+----------+--------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1" ;
++------+-------+----------+--------------------------------------------+
+; Port ; Type  ; Severity ; Details                                    ;
++------+-------+----------+--------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                               ;
++------+-------+----------+--------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|decodeKeysL4:dk" ;
++--------+--------+----------+---------------------------------+
+; Port   ; Type   ; Severity ; Details                         ;
++--------+--------+----------+---------------------------------+
+; de_esc ; Output ; Info     ; Explicitly unconnected          ;
++--------+--------+----------+---------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|lfsr:lfsrInst"                                              ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; lfsrVal ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV" ;
++------+-------+----------+----------------------------------------------+
+; Port ; Type  ; Severity ; Details                                      ;
++------+-------+----------+----------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                                 ;
++------+-------+----------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|regrce:rxdataD" ;
++------+-------+----------+---------------------------------------------+
+; Port ; Type  ; Severity ; Details                                     ;
++------+-------+----------+---------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                                ;
++------+-------+----------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|printable:pinst1" ;
++-------+--------+----------+---------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                     ;
++-------+--------+----------+---------------------------------------------+
+; pChar ; Output ; Info     ; Explicitly unconnected                      ;
++-------+--------+----------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab4_140L:Lab_UT|scdp:scdp|printable:pinst0" ;
++--------+--------+----------+--------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                    ;
++--------+--------+----------+--------------------------------------------+
+; pValid ; Output ; Info     ; Explicitly unconnected                     ;
++--------+--------+----------+--------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "resetGen:resetGen|N_bit_counter:uu0" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; up   ; Input ; Info     ; Stuck at VCC                          ;
++------+-------+----------+---------------------------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "fake_buart:buart" ;
++------+-------+----------+--------------------+
+; Port ; Type  ; Severity ; Details            ;
++------+-------+----------+--------------------+
+; rd   ; Input ; Info     ; Stuck at VCC       ;
++------+-------+----------+--------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "fake_pll:uut"                  ;
++--------------+--------+----------+------------------------+
+; Port         ; Type   ; Severity ; Details                ;
++--------------+--------+----------+------------------------+
+; PLLOUTGLOBAL ; Output ; Info     ; Explicitly unconnected ;
+; RESETB       ; Input  ; Info     ; Stuck at VCC           ;
+; BYPASS       ; Input  ; Info     ; Stuck at GND           ;
++--------------+--------+----------+------------------------+
 
 
 +-------------------------------+
@@ -158,138 +812,163 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Jun 03 04:41:55 2019
+    Info: Processing started: Mon Jun 03 23:09:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 3 design units, including 3 entities, in source file uarttxbuf.v
-    Info (12023): Found entity 1: uartTxBuf File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 13
-    Info (12023): Found entity 2: emitcrlf_fsm File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 173
-    Info (12023): Found entity 3: tx_fsm File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 242
+    Info (12023): Found entity 1: uartTxBuf File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 13
+    Info (12023): Found entity 2: emitcrlf_fsm File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 173
+    Info (12023): Found entity 3: tx_fsm File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 242
 Info (12021): Found 1 design units, including 1 entities, in source file top_sft.v
-    Info (12023): Found entity 1: top_sft File: C:/Users/Arman/Desktop/Lab4/top_sft.v Line: 1
+    Info (12023): Found entity 1: top_sft File: C:/Users/Arman/Desktop/testing/top_sft.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_sft.v
-    Info (12023): Found entity 1: tb_sft File: C:/Users/Arman/Desktop/Lab4/tb_sft.v Line: 35
+    Info (12023): Found entity 1: tb_sft File: C:/Users/Arman/Desktop/testing/tb_sft.v Line: 35
 Info (12021): Found 1 design units, including 1 entities, in source file regrce.v
-    Info (12023): Found entity 1: regrce File: C:/Users/Arman/Desktop/Lab4/regrce.v Line: 39
+    Info (12023): Found entity 1: regrce File: C:/Users/Arman/Desktop/testing/regrce.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file printable.v
-    Info (12023): Found entity 1: printable File: C:/Users/Arman/Desktop/Lab4/printable.v Line: 7
+    Info (12023): Found entity 1: printable File: C:/Users/Arman/Desktop/testing/printable.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file lfsr.v
-    Info (12023): Found entity 1: lfsr File: C:/Users/Arman/Desktop/Lab4/lfsr.v Line: 1
-Info (12021): Found 5 design units, including 5 entities, in source file latticehx1k.v
-    Info (12023): Found entity 1: inpin File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 42
-    Info (12023): Found entity 2: resetGen File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 64
-    Info (12023): Found entity 3: latticehx1k File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 97
-    Info (12023): Found entity 4: latticehx1k_pll File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 274
-    Info (12023): Found entity 5: N_bit_counter File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 318
+    Info (12023): Found entity 1: lfsr File: C:/Users/Arman/Desktop/testing/lfsr.v Line: 1
+Info (12021): Found 3 design units, including 3 entities, in source file latticehx1k.v
+    Info (12023): Found entity 1: resetGen File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 64
+    Info (12023): Found entity 2: latticehx1k File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 97
+    Info (12023): Found entity 3: N_bit_counter File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 318
 Info (12021): Found 3 design units, including 3 entities, in source file lab4_140l.v
-    Info (12023): Found entity 1: Lab4_140L File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 1
-    Info (12023): Found entity 2: scdp File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 111
-    Info (12023): Found entity 3: scctrl File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 250
+    Info (12023): Found entity 1: Lab4_140L File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 1
+    Info (12023): Found entity 2: scdp File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 111
+    Info (12023): Found entity 3: scctrl File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 250
 Info (12021): Found 1 design units, including 1 entities, in source file fake_pll.v
-    Info (12023): Found entity 1: fake_pll File: C:/Users/Arman/Desktop/Lab4/fake_pll.v Line: 26
+    Info (12023): Found entity 1: fake_pll File: C:/Users/Arman/Desktop/testing/fake_pll.v Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file fake_fifo.v
-    Info (12023): Found entity 1: fifo File: C:/Users/Arman/Desktop/Lab4/fake_fifo.v Line: 8
+    Info (12023): Found entity 1: fifo File: C:/Users/Arman/Desktop/testing/fake_fifo.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file fake_buart.v
-    Info (12023): Found entity 1: fake_buart File: C:/Users/Arman/Desktop/Lab4/fake_buart.v Line: 30
+    Info (12023): Found entity 1: fake_buart File: C:/Users/Arman/Desktop/testing/fake_buart.v Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file dispstring.v
-    Info (12023): Found entity 1: dispString File: C:/Users/Arman/Desktop/Lab4/dispString.v Line: 1
+    Info (12023): Found entity 1: dispString File: C:/Users/Arman/Desktop/testing/dispString.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodekeysl4.v
-    Info (12023): Found entity 1: decodeKeysL4 File: C:/Users/Arman/Desktop/Lab4/decodeKeysL4.v Line: 36
+    Info (12023): Found entity 1: decodeKeysL4 File: C:/Users/Arman/Desktop/testing/decodeKeysL4.v Line: 36
 Info (12021): Found 5 design units, including 5 entities, in source file buart.v
-    Info (12023): Found entity 1: baudgen File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 42
-    Info (12023): Found entity 2: baudgen2 File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 62
-    Info (12023): Found entity 3: uart File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 91
-    Info (12023): Found entity 4: rxuart File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 132
-    Info (12023): Found entity 5: buart File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 199
+    Info (12023): Found entity 1: baudgen File: C:/Users/Arman/Desktop/testing/buart.v Line: 42
+    Info (12023): Found entity 2: baudgen2 File: C:/Users/Arman/Desktop/testing/buart.v Line: 62
+    Info (12023): Found entity 3: uart File: C:/Users/Arman/Desktop/testing/buart.v Line: 91
+    Info (12023): Found entity 4: rxuart File: C:/Users/Arman/Desktop/testing/buart.v Line: 132
+    Info (12023): Found entity 5: buart File: C:/Users/Arman/Desktop/testing/buart.v Line: 199
 Info (12021): Found 1 design units, including 1 entities, in source file bin2asciihex.v
-    Info (12023): Found entity 1: bin2AsciiHex File: C:/Users/Arman/Desktop/Lab4/bin2AsciiHex.v Line: 6
+    Info (12023): Found entity 1: bin2AsciiHex File: C:/Users/Arman/Desktop/testing/bin2AsciiHex.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file asciihex2bin.v
-    Info (12023): Found entity 1: asciiHex2Bin File: C:/Users/Arman/Desktop/Lab4/asciiHex2Bin.v Line: 6
+    Info (12023): Found entity 1: asciiHex2Bin File: C:/Users/Arman/Desktop/testing/asciiHex2Bin.v Line: 6
 Info (12127): Elaborating entity "latticehx1k" for the top level hierarchy
-Info (12128): Elaborating entity "latticehx1k_pll" for hierarchy "latticehx1k_pll:latticehx1k_pll_inst" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 137
-Info (12128): Elaborating entity "inpin" for hierarchy "inpin:_rcxd" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 171
-Info (12128): Elaborating entity "uartTxBuf" for hierarchy "uartTxBuf:ufifo" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 187
-Info (12128): Elaborating entity "fifo" for hierarchy "uartTxBuf:ufifo|fifo:fifo" File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 75
-Warning (10230): Verilog HDL assignment warning at fake_fifo.v(34): truncated value with size 32 to match size of target (9) File: C:/Users/Arman/Desktop/Lab4/fake_fifo.v Line: 34
-Warning (10230): Verilog HDL assignment warning at fake_fifo.v(39): truncated value with size 32 to match size of target (9) File: C:/Users/Arman/Desktop/Lab4/fake_fifo.v Line: 39
-Info (12128): Elaborating entity "tx_fsm" for hierarchy "uartTxBuf:ufifo|tx_fsm:tx_fsm" File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 91
-Info (10264): Verilog HDL Case Statement information at uarttxbuf.v(325): all case item expressions in this case statement are onehot File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 325
-Info (12128): Elaborating entity "emitcrlf_fsm" for hierarchy "uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm" File: C:/Users/Arman/Desktop/Lab4/uarttxbuf.v Line: 101
-Info (12128): Elaborating entity "buart" for hierarchy "buart:buart" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 201
-Info (12128): Elaborating entity "rxuart" for hierarchy "buart:buart|rxuart:_rx" File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 217
-Info (12128): Elaborating entity "baudgen2" for hierarchy "buart:buart|rxuart:_rx|baudgen2:_baudgen" File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 167
-Warning (10230): Verilog HDL assignment warning at buart.v(69): truncated value with size 32 to match size of target (6) File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 69
-Warning (10230): Verilog HDL assignment warning at buart.v(77): truncated value with size 32 to match size of target (6) File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 77
-Info (12128): Elaborating entity "uart" for hierarchy "buart:buart|uart:_tx" File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 224
-Warning (10230): Verilog HDL assignment warning at buart.v(122): truncated value with size 32 to match size of target (4) File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 122
-Info (12128): Elaborating entity "baudgen" for hierarchy "buart:buart|uart:_tx|baudgen:_baudgen" File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 111
-Warning (10230): Verilog HDL assignment warning at buart.v(48): truncated value with size 32 to match size of target (7) File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 48
-Warning (10230): Verilog HDL assignment warning at buart.v(53): truncated value with size 32 to match size of target (7) File: C:/Users/Arman/Desktop/Lab4/buart.v Line: 53
-Info (12128): Elaborating entity "resetGen" for hierarchy "resetGen:resetGen" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 247
-Info (12128): Elaborating entity "N_bit_counter" for hierarchy "resetGen:resetGen|N_bit_counter:uu0" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 83
-Info (12128): Elaborating entity "Lab4_140L" for hierarchy "Lab4_140L:Lab_UT" File: C:/Users/Arman/Desktop/Lab4/latticehx1k.v Line: 265
-Info (12128): Elaborating entity "scdp" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 44
-Info (12128): Elaborating entity "asciiHex2Bin" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|asciiHex2Bin:a2b" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 143
-Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|regrce:u0" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 150
-Info (12128): Elaborating entity "printable" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|printable:pinst0" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 156
-Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|regrce:u2" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 164
-Info (12128): Elaborating entity "bin2AsciiHex" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|bin2AsciiHex:b2a0" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 182
-Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 199
-Info (12128): Elaborating entity "lfsr" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|lfsr:lfsrInst" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 236
-Info (12128): Elaborating entity "decodeKeysL4" for hierarchy "Lab4_140L:Lab_UT|decodeKeysL4:dk" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 68
-Warning (10036): Verilog HDL or VHDL warning at decodeKeysL4.v(59): object "is_b7_1" assigned a value but never read File: C:/Users/Arman/Desktop/Lab4/decodeKeysL4.v Line: 59
-Info (12128): Elaborating entity "scctrl" for hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 100
-Error (10122): Verilog HDL Event Control error at Lab4_140L.v(305): mixed single- and double-edge expressions are not supported File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 305
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(311): variable "EmsBitsSl" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 311
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(312): variable "next_state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 312
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(335): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 335
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(337): variable "de_bigE" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 337
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(339): variable "de_bigD" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 339
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(341): variable "de_bigL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 341
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(350): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 350
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(359): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 359
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(361): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 361
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(370): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 370
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(372): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 372
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(380): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 380
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(388): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 388
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(396): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 396
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(404): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 404
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(412): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 412
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(420): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 420
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(428): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 428
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(436): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 436
-Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(444): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 444
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(326): inferring latch(es) for variable "EmsLoaded", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(326): inferring latch(es) for variable "LdLFSR", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(326): inferring latch(es) for variable "nibbleIn1", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(326): inferring latch(es) for variable "nibbleIn2", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(326): inferring latch(es) for variable "sccLdKey", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[0]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[1]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[2]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[3]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[4]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[5]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[6]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "sccLdKey[7]" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "nibbleIn2" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "nibbleIn1" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "LdLFSR" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Info (10041): Inferred latch for "EmsLoaded" at Lab4_140L.v(326) File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 326
-Error (12152): Can't elaborate user hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl" File: C:/Users/Arman/Desktop/Lab4/Lab4_140L.v Line: 100
-Info (144001): Generated suppressed messages file C:/Users/Arman/Desktop/Lab4/output_files/Lab4.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 34 warnings
-    Error: Peak virtual memory: 553 megabytes
-    Error: Processing ended: Mon Jun 03 04:42:04 2019
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:21
+Warning (10034): Output port "sd" at latticehx1k.v(98) has no driver File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 98
+Warning (10034): Output port "to_ir" at latticehx1k.v(102) has no driver File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 102
+Info (12128): Elaborating entity "fake_pll" for hierarchy "fake_pll:uut" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 146
+Warning (10755): Verilog HDL warning at fake_pll.v(38): assignments to PLLOUTCORE create a combinational loop File: C:/Users/Arman/Desktop/testing/fake_pll.v Line: 38
+Warning (10034): Output port "PLLOUTGLOBAL" at fake_pll.v(29) has no driver File: C:/Users/Arman/Desktop/testing/fake_pll.v Line: 29
+Info (12128): Elaborating entity "uartTxBuf" for hierarchy "uartTxBuf:ufifo" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 216
+Info (12128): Elaborating entity "fifo" for hierarchy "uartTxBuf:ufifo|fifo:fifo" File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 75
+Warning (10230): Verilog HDL assignment warning at fake_fifo.v(34): truncated value with size 32 to match size of target (9) File: C:/Users/Arman/Desktop/testing/fake_fifo.v Line: 34
+Warning (10230): Verilog HDL assignment warning at fake_fifo.v(39): truncated value with size 32 to match size of target (9) File: C:/Users/Arman/Desktop/testing/fake_fifo.v Line: 39
+Info (12128): Elaborating entity "tx_fsm" for hierarchy "uartTxBuf:ufifo|tx_fsm:tx_fsm" File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 91
+Info (10264): Verilog HDL Case Statement information at uarttxbuf.v(325): all case item expressions in this case statement are onehot File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 325
+Info (12128): Elaborating entity "emitcrlf_fsm" for hierarchy "uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm" File: C:/Users/Arman/Desktop/testing/uarttxbuf.v Line: 101
+Info (12128): Elaborating entity "fake_buart" for hierarchy "fake_buart:buart" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 234
+Warning (10034): Output port "tx" at fake_buart.v(34) has no driver File: C:/Users/Arman/Desktop/testing/fake_buart.v Line: 34
+Info (12128): Elaborating entity "resetGen" for hierarchy "resetGen:resetGen" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 247
+Info (12128): Elaborating entity "N_bit_counter" for hierarchy "resetGen:resetGen|N_bit_counter:uu0" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 83
+Info (12128): Elaborating entity "Lab4_140L" for hierarchy "Lab4_140L:Lab_UT" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 265
+Info (12128): Elaborating entity "scdp" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 44
+Info (12128): Elaborating entity "asciiHex2Bin" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|asciiHex2Bin:a2b" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 143
+Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|regrce:u0" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 150
+Info (12128): Elaborating entity "printable" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|printable:pinst0" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 156
+Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|regrce:u2" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 164
+Info (12128): Elaborating entity "bin2AsciiHex" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|bin2AsciiHex:b2a0" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 182
+Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|regrce:rddataDV" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 199
+Info (12128): Elaborating entity "lfsr" for hierarchy "Lab4_140L:Lab_UT|scdp:scdp|lfsr:lfsrInst" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 236
+Info (12128): Elaborating entity "decodeKeysL4" for hierarchy "Lab4_140L:Lab_UT|decodeKeysL4:dk" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 68
+Warning (10036): Verilog HDL or VHDL warning at decodeKeysL4.v(59): object "is_b7_1" assigned a value but never read File: C:/Users/Arman/Desktop/testing/decodeKeysL4.v Line: 59
+Info (12128): Elaborating entity "scctrl" for hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 100
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(338): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 338
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(340): variable "de_bigE" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 340
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(342): variable "de_bigD" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 342
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(344): variable "de_bigL" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 344
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(353): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 353
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(362): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 362
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(364): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 364
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(373): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 373
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(375): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 375
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(383): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 383
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(391): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 391
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(399): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 399
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(407): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 407
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(415): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 415
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(423): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 423
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(431): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 431
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(439): variable "de_hex" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 439
+Warning (10235): Verilog HDL Always Construct warning at Lab4_140L.v(447): variable "de_cr" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 447
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(329): inferring latch(es) for variable "EmsLoaded", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(329): inferring latch(es) for variable "LdLFSR", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(329): inferring latch(es) for variable "nibbleIn1", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(329): inferring latch(es) for variable "nibbleIn2", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Warning (10240): Verilog HDL Always Construct warning at Lab4_140L.v(329): inferring latch(es) for variable "sccLdKey", which holds its previous value in one or more paths through the always construct File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[0]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[1]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[2]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[3]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[4]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[5]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[6]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "sccLdKey[7]" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "nibbleIn2" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "nibbleIn1" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "LdLFSR" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (10041): Inferred latch for "EmsLoaded" at Lab4_140L.v(329) File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+Info (12128): Elaborating entity "regrce" for hierarchy "Lab4_140L:Lab_UT|scctrl:scctrl|regrce:r1" File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 460
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|nibbleIn2 has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 285
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.decrypt2 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|LdLFSR has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load9 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|nibbleIn1 has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 285
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.decrypt2 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[6] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load2 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[4] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load4 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[2] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load6 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[0] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load8 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[7] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[5] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load3 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[3] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load5 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13012): Latch Lab4_140L:Lab_UT|scctrl:scctrl|sccLdKey[1] has unsafe behavior File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 329
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Lab4_140L:Lab_UT|scctrl:scctrl|state.load7 File: C:/Users/Arman/Desktop/testing/Lab4_140L.v Line: 284
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sd" is stuck at GND File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 98
+    Warning (13410): Pin "to_ir" is stuck at GND File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 102
+    Warning (13410): Pin "o_serial_data" is stuck at GND File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 103
+    Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 110
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk_in" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 100
+    Warning (15610): No output dependent on input pin "from_pc" File: C:/Users/Arman/Desktop/testing/latticehx1k.v Line: 101
+Info (21057): Implemented 6849 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 6820 logic cells
+Info (144001): Generated suppressed messages file C:/Users/Arman/Desktop/testing/output_files/Lab4.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 586 megabytes
+    Info: Processing ended: Mon Jun 03 23:09:24 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Arman/Desktop/Lab4/output_files/Lab4.map.smsg.
+The suppressed messages can be found in C:/Users/Arman/Desktop/testing/output_files/Lab4.map.smsg.
 
 

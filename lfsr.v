@@ -1,3 +1,9 @@
+/*
+ * Author: Arman Massoudian
+ * A15684193
+ * github: armanmass
+ */
+
 module lfsr (
 	     output [31:0] lfsrVal, // lfsr current value
 	     output [7:0]  psrByte, // psuedo random byte
@@ -9,16 +15,20 @@ module lfsr (
 
 reg [31:0] prng_lfsr;
 
+//polynomial taps for our LFSR
 wire new_bit = prng_lfsr[2] ^ prng_lfsr[5] ^ prng_lfsr[6] ^ prng_lfsr[12] ^ prng_lfsr[30];
 
 assign lfsrVal[31:0] = prng_lfsr[31:0];
 
+//this is our key
 assign psrByte[7:0] = prng_lfsr[7:0] ^ prng_lfsr[15:8] ^
 					  prng_lfsr[23:16] ^ {1'b1, prng_lfsr[30:24]};
 
+//load step or remain the same for prng
 wire [31:0] prng_lfsr_next = (ldLFSR) ? ldVal[31:0] :
 					  		 (step) ? {prng_lfsr[30:0], new_bit} : prng_lfsr[31:0];
 
+//reset advance prng to next
 always @(posedge clk or posedge rst)
 begin
 	if(rst)

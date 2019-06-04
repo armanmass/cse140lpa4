@@ -1,4 +1,20 @@
 
+State Machine - |latticehx1k|Lab4_140L:Lab_UT|scctrl:scctrl|state
+Name state.decrypt2 state.load9 state.load8 state.load7 state.load6 state.load5 state.load4 state.load3 state.load2 state.load state.decrypt state.encrypt state.idle 
+state.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.encrypt 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.decrypt 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.load 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.load2 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.load3 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.load4 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.load5 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.load6 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.load7 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.load8 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.load9 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.decrypt2 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
 State Machine - |latticehx1k|uartTxBuf:ufifo|emitcrlf_fsm:emitcrlf_fsm|cstate
 Name cstate.EMITLF cstate.WTEMITCR cstate.EMITCR cstate.IDLE 
 cstate.IDLE 0 0 0 0 
